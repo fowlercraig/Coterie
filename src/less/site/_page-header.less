@@ -1,0 +1,48 @@
+.page {
+
+	&-header {
+
+		padding: @spaced*4 0;
+		position: relative;
+
+		&-content {
+			.center();
+			position: relative;
+			z-index: 1;
+			color: @white;
+		}
+
+		&-bg {
+			background: @blue;
+			.cover();
+			width: 9999px;
+			left: -999px;
+		}
+
+		.emphasized {
+			.font_size(26);
+		}
+
+		.divider {
+			margin: 0;
+		}
+
+		&--more {
+			float: right;
+		}
+
+	}
+
+	&-title {
+		text-transform: lowercase;
+		.font_size(50);
+		margin-bottom: 0;
+		font-weight: normal;
+		line-height: 1;
+		color: @black;
+		&:after {
+			content: '.'
+		}
+	}
+
+}

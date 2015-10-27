@@ -1,0 +1,114 @@
+#header {
+
+   padding: @spaced/2 0;
+   .transition();
+   background: @white;
+   position: relative;
+
+   a {
+      color: @gray;
+      
+      &:hover, &.current, &.active {
+         color: darken(@gray, 25%)
+      }
+
+   }
+
+   &-mobile {
+      padding: @spaced/1.5 0;
+      .transition();      
+      position: absolute;
+      top: 100%;
+      width: 100%;
+      color: @white;
+
+      a {
+         color: inherit;
+      }
+
+      &.mobile-menu {
+
+         &--active {
+            transform: translate(0, -100%);
+         }
+
+      }
+   }
+
+   &.chin {
+      @media @min {
+         padding: @spaced/1.5 0;
+      }
+      @media @tablet {
+         padding: @spaced/2 0 @spaced*4;
+      }    
+   }
+
+   &.forehead {
+      @media @min {
+         padding: @spaced/1.5 0;
+      }
+      @media @tablet {
+         padding: @spaced*4 0 @spaced/1.5;      
+      }
+      
+   }
+
+   &.fivehead {
+      @media @min {
+         padding: @spaced/1.5 0;
+      }
+      @media @tablet {
+         padding: @spaced*5 0 @spaced/1.5;      
+      }
+   }
+
+   &.fixed {
+
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 999;
+      transition: background-color 300ms ease;
+
+      &:hover {
+         background-color: @white;
+      }
+
+   }
+
+   &-wrapper {
+      //overflow: hidden;
+      position: relative;
+      background: @black;
+   }
+
+   &.mobile-menu {
+
+      &--active {
+         transform: translate(0, -100%);
+         opacity: .8;
+      }
+
+   }
+
+   &.fs-swap {
+      &-active {
+         background: @lightPink
+      }
+   }
+
+   &--active {
+      position: relative;
+      height: 0;
+      z-index: 99;
+      overflow: hidden;
+      .transition();
+      &.fs-swap {
+         &-active {
+            height: 400px;
+         }
+      }
+   }
+
+}
