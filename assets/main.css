@@ -3017,8 +3017,9 @@ img.rounded {
   outline: none;
 }
 body {
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Maison', 'Arial', sans-serif;
   font-weight: 400;
+  text-rendering: optizimeLegibility;
   -webkit-font-smoothing: antialiased;
   color: #666666;
   line-height: 1.5;
@@ -3042,8 +3043,9 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Roboto Condensed', sans-serif;
-  font-weight: 700;
+  font-family: 'Maison', 'Arial', sans-serif;
+  font-weight: 200;
+  text-rendering: optizimeLegibility;
   color: #404040;
   line-height: inherit;
   margin: 15px 0;
@@ -3428,6 +3430,24 @@ form input[type=search]-burg {
   background: url('dot.svg');
   background-size: contain;
 }
+@font-face {
+  font-family: 'Maison Mono';
+  src: url('MaisonNeue-Mono.eot?#iefix') format('embedded-opentype'), url('MaisonNeue-Mono.woff') format('woff'), url('MaisonNeue-Mono.ttf') format('truetype'), url('MaisonNeue-Mono.svg#MaisonNeue-Mono') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Maison';
+  src: url('MaisonNeue-Light.eot?#iefix') format('embedded-opentype'), url('MaisonNeue-Light.woff') format('woff'), url('MaisonNeue-Light.ttf') format('truetype'), url('MaisonNeue-Light.svg#MaisonNeue-Light') format('svg');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Maison';
+  src: url('MaisonNeue-Book.eot?#iefix') format('embedded-opentype'), url('MaisonNeue-Book.woff') format('woff'), url('MaisonNeue-Book.ttf') format('truetype'), url('MaisonNeue-Book.svg#MaisonNeue-Book') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
 .btn {
   cursor: pointer;
   display: inline-block;
@@ -3720,15 +3740,17 @@ form input[type=search]-burg {
 .banner--title {
   color: #fff;
   line-height: 1.2;
-  font-family: 'Roboto Condensed', sans-serif;
-  font-weight: 700;
+  font-family: 'Maison', 'Arial', sans-serif;
+  font-weight: 200;
+  text-rendering: optizimeLegibility;
   text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 .banner--subtitle {
   color: #fff;
   line-height: 1.2;
-  font-family: 'Roboto Condensed', sans-serif;
-  font-weight: 700;
+  font-family: 'Maison', 'Arial', sans-serif;
+  font-weight: 200;
+  text-rendering: optizimeLegibility;
   font-weight: 300;
   text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
@@ -3888,6 +3910,25 @@ form input[type=search]-burg {
 }
 .alert-notice {
   background: #fcede6;
+}
+#styleguide {
+  padding-top: 50px;
+}
+#styleguide .section-header {
+  border-bottom: 1px solid #E6E7E8;
+  margin-bottom: 25px;
+}
+#styleguide .color {
+  margin-bottom: 25px;
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+#styleguide .color small {
+  display: block;
+}
+#styleguide .color .bg {
+  height: 80px;
+  margin-bottom: 5px;
 }
 @media screen and (min-width: 740px) {
   #content {
