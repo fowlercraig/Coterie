@@ -8,14 +8,14 @@
 <meta charset="utf-8">
 <title>Coterie</title>
 <meta name="description" content="">
-<link rel="shortcut icon" href="assets/img/favicon.ico">
+<link rel="shortcut icon" href="../coterie-3-50132868/assets/favicon.ico">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <!--[if lt IE 9]>
 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 
-<link rel="stylesheet" href="assets/main.css">
+<link rel="stylesheet" href="../coterie-3-50132868/assets/main.css">
 <script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js?ver=1.11.1'></script>
 <link href="//cdn.symbolset.com/0a5420ac8ec04a68e39a13df1f9d8f83da2799f8/symbolset.css" rel="stylesheet">
 <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>
@@ -42,8 +42,8 @@
 <?php include('parts/footer.php') ?>
 </div>
 
-<script type='text/javascript' src='assets/vendor.min.js'></script>
-<script type='text/javascript' src='assets/main.min.js'></script>
+<script type='text/javascript' src='../coterie-3-50132868/assets/vendor.min.js'></script>
+<script type='text/javascript' src='../coterie-3-50132868/assets/main.min.js'></script>
 <script src="//cdn.symbolset.com/0a5420ac8ec04a68e39a13df1f9d8f83da2799f8/symbolset.js"></script>
 
 </body>
