@@ -106,12 +106,7 @@
         esto ditios vent alitiunt ulluptas doluptatint fuga. Nam, sit et cones es 
         sperun tintis doluptatate se et, omnis niam explique.
       </p>
+    </div>
   </div>
-
 </div>
-
-
-
-
-
-
+<hr class="invisible">
