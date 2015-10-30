@@ -17,7 +17,7 @@
 @bgGray:      #F2F2F2;
 @lighterGray: #E6E5E6;
 @lightGray:   #E6E7E8;
-@gray:        #aaa;
+@gray:        #999;
 @warmGray:    #C9CEC9;
 @darkGray:    #939597;
 
@@ -51,6 +51,15 @@
 @white75:     rgba(255, 255, 255, 0.75);
 
 @spaced:      25px;
+
+.color {
+  &-black {
+    color: @black;
+  }
+  &-gray, &-grey {
+    color: @gray;
+  }
+}
 
 .bg-color {
   &-green {

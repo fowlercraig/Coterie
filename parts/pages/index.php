@@ -5,7 +5,9 @@
 				<div class="fs-cell fs-all-full text-left">
 					<p>
 						new arrivals:<br>
-						<a href="?page=brand">common projects.</a>
+						<a href="?page=brand">common projects.</a><br>
+						<small><a href="#" class='ss-gizmo ss-left  right btn-icon'></a></small>
+						<small><a href="#" class='ss-gizmo ss-right right btn-icon'></a></small>
 					</p>
 				</div>
 			</div>

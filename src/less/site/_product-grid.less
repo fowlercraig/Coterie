@@ -14,8 +14,41 @@
 
 .product--grid {
 
+   &-item {
+      overflow: hidden;
+   }
+
    &-thumb {
       margin-bottom: @spaced/2;
+      position: relative;
+      overflow: hidden;
+      img {
+         transition: transform 200ms ease;
+      }
+      &:hover {
+         img {
+            transform: translateY(-@spaced*2);
+         }
+         .product--grid-thumb_controls {
+            transform: translateY(0);
+         }
+      }
+      &_controls {
+         height: @spaced*2;
+         position: absolute;
+         bottom: 0;
+         line-height: @spaced*2;
+         width: 100%;
+         background: @black;
+         transition: transform 200ms ease;
+         transform: translateY(@spaced*2);
+         padding: 0 15px;
+         .font_size(14);
+         color: @white;
+         a {
+            color: @white;
+         }
+      }
    }
 
    &-title {

@@ -5,6 +5,12 @@
 		padding: @spaced*4 0;
 		position: relative;
 
+		&.chin {
+			&-sm {
+				padding-bottom: @spaced*2;
+			}
+		}
+
 		&-content {
 			.center();
 			position: relative;
@@ -42,6 +48,16 @@
 		color: @black;
 		&:after {
 			content: '.'
+		}
+	}
+
+	&-filters {
+		padding: @spaced/2 0;
+		a {
+			color: @gray;
+			&:hover {
+				color: @black;
+			}
 		}
 	}
 
