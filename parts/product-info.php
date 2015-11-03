@@ -13,7 +13,7 @@
 
    <form id="product--purchase">
       <div id="product--options" class="fs-row">
-         <div class="fs-cell fs-lg-4 fs-md-2 fs-sm-1">
+         <div class="fs-cell fs-lg-4 fs-md-6 fs-sm-3">
             <label><small>color</small></label>
             <select class="select-nostyle">
                <option>heather gray</option>
@@ -21,7 +21,7 @@
                <option>natural white</option>
             </select>
          </div>
-         <div class="fs-cell fs-lg-4 fs-md-2 fs-sm-1">
+         <div class="fs-cell fs-lg-4 fs-md-3 fs-sm-half">
             <label><small>size</small></label>
             <select class="select-nostyle">
                <option>small</option>
@@ -29,7 +29,7 @@
                <option>large</option>
             </select>
          </div>
-         <div class="fs-cell fs-lg-4 fs-md-2 fs-sm-1">
+         <div class="fs-cell fs-lg-4 fs-md-3 fs-sm-half">
             <label><small>quantity</small></label>
             <select class="select-nostyle">
                <option>1</option>
@@ -37,11 +37,11 @@
                <option>3</option>
             </select>
          </div>
-         <div class="fs-cell fs-lg-4 fs-md-2 fs-sm-1">
+         <div class="fs-cell fs-lg-4 fs-md-3 fs-sm-half">
             <hr class="invisible compact">
             <a href="#" class="btn btn-primary btn-full ss-gizmo ss-plus right btn-icon">add to cart</a>
          </div>
-         <div class="fs-cell fs-lg-4 fs-md-2 fs-sm-1">
+         <div class="fs-cell fs-lg-4 fs-md-3 fs-sm-half">
             <hr class="invisible compact">
             <a href="#" class="btn btn-default btn-full ss-gizmo ss-plus right btn-icon">share</a>
          </div>

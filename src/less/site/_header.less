@@ -1,6 +1,6 @@
 #header {
 
-   padding: @spaced/2 0;
+   //padding: @spaced/2 0;
    .transition();
    background: @white;
    position: relative;
@@ -103,7 +103,10 @@
 
    &.fs-swap {
       &-active {
-         background: @lightPink
+         background: @black;
+         a {
+            color: @white;
+         }
       }
    }
 
@@ -116,6 +119,56 @@
       &.fs-swap {
          &-active {
             height: 400px;
+         }
+      }
+   }
+
+   &--nav {
+      &_right {
+         position: relative;
+         .transition();
+         &.fs-swap {
+            &-active {
+               background: @black;
+               a {
+                  color: @white;
+               }
+            }
+         }
+      }
+      &_cart {
+         //height: 400px;
+         width: 100%;
+         z-index: 99;
+         background: @black;
+         position: absolute;
+         color: @white;
+         opacity: 0;
+         top: -5px;
+         pointer-events: none;
+         .transition();
+         .divider {
+            background: fade(@white, 10%)
+         }
+         &.fs-swap {
+            &-active {
+               top: 0;
+               opacity: 1;
+               pointer-events: auto;
+            }
+         }
+         .cart {
+            &-header {
+               border-bottom: 1px solid fade(@white, 10%);
+               .wrapper {
+                  padding-top: 0;
+                  padding-bottom: 0;
+               }
+            }
+            &-items {
+               max-height: 420px;
+               overflow: scroll;
+            }
          }
       }
    }

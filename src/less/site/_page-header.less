@@ -46,8 +46,37 @@
 		font-weight: normal;
 		line-height: 1;
 		color: @black;
+		.transition();
 		&:after {
 			content: '.'
+		}
+		&_search {
+			display: block;
+			.transition();
+			border-bottom: 1px solid fade(@black, 25%);
+			width: 100%;
+			font-weight: 500;
+			color: @black;
+			background: none;
+			.font_size(42);
+			&:focus {
+				border-bottom: 1px solidfade(@black, 25%);
+			}
+			&::placeholder {
+				color: fade(@black, 25%);
+			}
+		}
+		&_wrapper {
+			overflow: hidden;
+			&.active {
+				.page-title {
+					opacity: 0;
+					transform: translateY(-100%);
+				}
+				.page-title_search {
+					transform: translateY(-100%);
+				}
+			}
 		}
 	}
 
