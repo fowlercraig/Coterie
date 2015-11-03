@@ -4717,8 +4717,10 @@ form input[type=search]-burg {
   background: #fff;
   position: relative;
 }
-#header:hover {
-  background: #F2F2F2;
+@media screen and (min-width: 740px) {
+  #header:hover {
+    background: #F2F2F2;
+  }
 }
 #header.home:hover {
   background: #fff;
@@ -4746,6 +4748,17 @@ form input[type=search]-burg {
 }
 #header-mobile.active {
   opacity: 1;
+}
+#header-mobile .btn-close {
+  font-size: 24px;
+  font-size: 1.5rem;
+  color: #111;
+  display: block;
+}
+#header-mobile .btn-close:before {
+  position: relative;
+  top: .125em;
+  margin-left: -8px;
 }
 #header-mobile nav {
   padding-top: 25px;

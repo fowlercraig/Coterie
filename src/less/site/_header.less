@@ -6,7 +6,10 @@
    position: relative;
 
    &:hover {
-      background: @bgGray;
+      @media @tablet {
+         background: @bgGray;   
+      }
+      
    }
    &.home {
       &:hover {
@@ -33,6 +36,21 @@
 
       &.active {
          opacity: 1;
+      }
+
+      &--content {
+         //padding-top: 20px;
+      }
+
+      .btn-close {
+         .font_size(24);
+         color: @black;
+         display: block;
+         &:before {
+            position: relative;
+            top: .125em;
+            margin-left: -8px;
+         }
       }
 
       nav {
