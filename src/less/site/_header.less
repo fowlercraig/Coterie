@@ -24,24 +24,31 @@
    }
 
    &-mobile {
-      padding: @spaced/1.5 0;
-      .transition();      
-      position: absolute;
-      top: 100%;
-      width: 100%;
-      color: @white;
+      .cover();
+      .transition();
+      position: fixed;
+      z-index: 999;
+      background: fade(@white, 95%);
+      opacity: 0;
 
-      a {
-         color: inherit;
+      &.active {
+         opacity: 1;
       }
 
-      &.mobile-menu {
-
-         &--active {
-            transform: translate(0, -100%);
+      nav {
+         padding-top: @spaced;
+         a {
+            display: block;
+            text-align: left;
+            padding: 0;
+            color: @textGray;
+            .font_size(36);
+            height: 50px;
+            line-height: 50px;
+            font-weight: 300;
          }
-
       }
+
    }
 
    &.chin {

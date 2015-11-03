@@ -2,7 +2,19 @@
 
 	&-header {
 
-		padding: @spaced*4 0;
+		@media @min {
+			padding: @spaced 0 @spaced;	
+		}
+		@media @mobile {
+			padding: @spaced*2 0;	
+		}
+		@media @tablet {
+			padding: @spaced*3 0;	
+		}
+		@media @desktop {
+			padding: @spaced*4 0;	
+		}
+		
 		position: relative;
 
 		&.chin {

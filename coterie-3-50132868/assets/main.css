@@ -4732,21 +4732,34 @@ form input[type=search]-burg {
   color: #595959;
 }
 #header-mobile {
-  padding: 16.66666667px 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
   -webkit-transition: 300ms ease;
           transition: 300ms ease;
-  position: absolute;
-  top: 100%;
-  width: 100%;
-  color: #fff;
+  position: fixed;
+  z-index: 999;
+  background: rgba(255, 255, 255, 0.95);
+  opacity: 0;
 }
-#header-mobile a {
-  color: inherit;
+#header-mobile.active {
+  opacity: 1;
 }
-#header-mobile.mobile-menu--active {
-  -webkit-transform: translate(0, -100%);
-      -ms-transform: translate(0, -100%);
-          transform: translate(0, -100%);
+#header-mobile nav {
+  padding-top: 25px;
+}
+#header-mobile nav a {
+  display: block;
+  text-align: left;
+  padding: 0;
+  color: #666666;
+  font-size: 36px;
+  font-size: 2.25rem;
+  height: 50px;
+  line-height: 50px;
+  font-weight: 300;
 }
 @media screen and (min-width: 300px) {
   #header.chin {
@@ -4920,8 +4933,27 @@ form input[type=search]-burg {
   }
 }
 .page-header {
-  padding: 100px 0;
   position: relative;
+}
+@media screen and (min-width: 300px) {
+  .page-header {
+    padding: 25px 0 25px;
+  }
+}
+@media screen and (min-width: 500px) {
+  .page-header {
+    padding: 50px 0;
+  }
+}
+@media screen and (min-width: 740px) {
+  .page-header {
+    padding: 75px 0;
+  }
+}
+@media screen and (min-width: 980px) {
+  .page-header {
+    padding: 100px 0;
+  }
 }
 .page-header.chin-sm {
   padding-bottom: 50px;
