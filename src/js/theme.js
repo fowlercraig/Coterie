@@ -1,5 +1,6 @@
 // @codekit-append "_notifications.js"
 // @codekit-append "_mobilemenu.js"
+// @codekit-append "_swipe.js"
 
 function searchClick(){
 
@@ -41,7 +42,11 @@ $(document).ready(function(){
 
 	$(".wallpaper").background();
 	$(".carousel").carousel();
-	$(".equal").equalize();
+
+  $('.equal').imagesLoaded( function() {
+	 $(this).equalize();
+  });
+   
 	$(".cart-item").equalize({
 		target: ".cart-item-cell"
 	});

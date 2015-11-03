@@ -13,3 +13,6 @@
 // @codekit-prepend "../bower_components/headhesive.js/dist/headhesive.js"
 // @codekit-prepend "../bower_components/jquery.transit/jquery.transit.js"
 // @codekit-prepend "../bower_components/shopify-cartjs/dist/rivets-cart.min.js"
+// @codekit-prepend "../bower_components/imagesloaded/imagesloaded.pkgd.js"
+// @codekit-prepend "../bower_components/photoswipe/dist/photoswipe.min.js"
+// @codekit-prepend "../bower_components/photoswipe/dist/photoswipe-ui-default.min.js"

@@ -126,29 +126,30 @@
    &--nav {
       &_right {
          position: relative;
-         .transition();
-         &.fs-swap {
-            &-active {
-               background: @black;
-               a {
-                  color: @white;
-               }
-            }
-         }
       }
       &_cart {
          //height: 400px;
-         width: 100%;
+         @media @tablet {
+            width: 400px;
+         }
+         @media @desktop {
+            width: 400px;   
+         }
+         
          z-index: 99;
          background: @black;
          position: absolute;
          color: @white;
          opacity: 0;
-         top: -5px;
+         top: 0;
+         right: 0;
          pointer-events: none;
          .transition();
          .divider {
             background: fade(@white, 10%)
+         }
+         a {
+            color: @white;
          }
          &.fs-swap {
             &-active {
@@ -160,6 +161,10 @@
          .cart {
             &-header {
                border-bottom: 1px solid fade(@white, 10%);
+               a {
+                  color: @white;
+                  display: block;
+               }
                .wrapper {
                   padding-top: 0;
                   padding-bottom: 0;

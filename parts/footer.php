@@ -11,3 +11,4 @@
       </nav>
    </div>
 </footer>
+<?php include('parts/pswp-elements.php') ?>
