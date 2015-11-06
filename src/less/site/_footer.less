@@ -5,6 +5,12 @@
 	color: @gray;
    .font_size(15);
 
+   .wag {
+      a {
+         border: none;
+      }
+   }
+
 	a { 
       color: inherit; 
       margin-bottom: 0;
@@ -14,12 +20,16 @@
       @media @min {
          display: block;
          text-align: left;
+         border-bottom: 1px solid darken(@gray, 45%);
          &.btn {
             padding-left: 0;
+            height: 40px;
+            line-height: 40px;
          }
       }
       @media @tablet {
          display: inline-block;
+         border-bottom: 0;
          &.btn {
             padding-left: 8px;
             &:first-child {

@@ -5303,6 +5303,9 @@ table td:first-child {
   font-size: 15px;
   font-size: 0.9375rem;
 }
+#footer .wag a {
+  border: none;
+}
 #footer a {
   color: inherit;
   margin-bottom: 0;
@@ -5314,14 +5317,18 @@ table td:first-child {
   #footer a {
     display: block;
     text-align: left;
+    border-bottom: 1px solid #262626;
   }
   #footer a.btn {
     padding-left: 0;
+    height: 40px;
+    line-height: 40px;
   }
 }
 @media screen and (min-width: 740px) {
   #footer a {
     display: inline-block;
+    border-bottom: 0;
   }
   #footer a.btn {
     padding-left: 8px;

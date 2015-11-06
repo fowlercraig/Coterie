@@ -31,7 +31,7 @@
             <a href="#" class="btn btn-nav swap right fs-sm-hide" data-swap-target=".about-swap">about</a>
             <a id="search-start" href="?page=search" class="btn btn-nav swap search-launch" data-swap-target=".search-swap" data-swap-linked=".search-launch">search</a>
             <a href="#" class="btn btn-nav swap right btn-last cart-launch fs-sm-hide" data-swap-target=".cart-swap" data-swap-linked=".cart-launch">cart (3)</a>
-            <a href="?page=cart" class="btn btn-nav btn-last fs-md-hide fs-lg-hide">cart (<span data-cart-render="item_count"></span>)</a>
+            <a href="?page=cart" class="btn btn-nav btn-last fs-md-hide fs-lg-hide">cart (3)</a>
             <?php include('parts/cart-header.php'); ?>
          </nav>
       </div>
