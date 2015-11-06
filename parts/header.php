@@ -11,7 +11,7 @@
 <?php endif; ?>
 
 <div id="header-wrapper">
-   <header id="header" class="menu-swap <?php if($page == 'index'): ?>home<?php endif; ?>">
+   <header id="header" class="menu-swap about-swap <?php if($page == 'index'): ?>home<?php endif; ?>">
       <div class="fs-row">
          <nav id="header--nav_left" class="fs-cell fs-lg-hide fs-md-hide fs-sm-1">
             <a href="#" id="header-menu" class="btn btn-nav btn-hamburg">&nbsp;</a>
@@ -36,6 +36,7 @@
          </nav>
       </div>
    </header>
+   <?php include('parts/header-about.php'); ?>
 </div>
 
 <?php include('parts/search-header.php'); ?>

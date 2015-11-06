@@ -1,0 +1,43 @@
+#about {
+	&-header {
+		opacity: 0;
+		//pointer-events: none;
+		transition: 200ms ease;
+		color: @white;
+		position: absolute;
+		width: 100%;
+		z-index: 9;
+		top: 0;
+		//margin-top: -60px;
+		min-height: 480px;
+		
+		a, h1,h2,h3,h4,h5,h6 {
+			color: inherit;
+		}
+
+		&_wrapper {
+			position: relative;
+			margin-top: 60px;
+			min-height: 480px;
+		}
+
+		&_bg {
+			.cover();
+			background: @black;
+		}
+
+		&.fs-swap {
+			&-active {
+				opacity: 1;
+				pointer-events: auto;
+				min-height: 450px;
+				@media @min {
+					min-height: 450px;
+				}
+				@media @tablet {
+					min-height: 500px;
+				}
+			}
+		}
+	}
+}
