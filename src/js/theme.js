@@ -17,7 +17,6 @@ function searchClick(){
     $('.page-title_wrapper').css({
       height: height,
       position: 'relative',
-      zIndex: 9999,
     });
 
      setTimeout(function(){
@@ -33,6 +32,11 @@ function searchClick(){
     setTimeout(function(){
       $('.page-title_search').remove();  
     },300);
+
+    $('.page-title_wrapper').css({
+      height: height,
+      position: 'relative',
+    });
 
   });
 

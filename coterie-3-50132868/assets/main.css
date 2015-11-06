@@ -5113,7 +5113,7 @@ table td:first-child {
   -webkit-transition: 300ms ease;
           transition: 300ms ease;
   position: relative;
-  z-index: 10;
+  z-index: 99;
 }
 #header.home:hover {
   background: #fff;
@@ -5452,6 +5452,9 @@ table td:first-child {
 .page-title_wrapper {
   overflow: hidden;
 }
+.page-title_wrapper.active {
+  z-index: 999;
+}
 .page-title_wrapper.active .page-title {
   opacity: 0;
   -webkit-transform: translateY(-100%);
@@ -5769,10 +5772,8 @@ table td:first-child {
 #about-header h6 {
   color: inherit;
 }
-#about-header_wrapper {
-  position: relative;
-  margin-top: 60px;
-  min-height: 480px;
+#about-header_centered {
+  padding-top: 60px;
 }
 #about-header_bg {
   height: 100%;

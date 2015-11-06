@@ -1,5 +1,4 @@
 <div id="about-header" class="about-swap">
-	<div id="about-header_wrapper">
 	<div id="about-header_centered" class="centered centered-full">
 		<div class="fs-row">
 			<div class="fs-cell fs-all-full">
@@ -14,7 +13,6 @@
 				</p>
 			</div>
 		</div>
-	</div>
 	</div>
 	<div id="about-header_bg"></div>
 </div>
