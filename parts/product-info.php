@@ -1,6 +1,6 @@
 <div id="product--info">
    <header>
-      <span class="color-gray">Brand Name</span>
+      <a href="?page=brand" class="color-gray">Common Projects</a>
       <hr class="invisible compact">
       <h1 id="product--title">
          army shirt 

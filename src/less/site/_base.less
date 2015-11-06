@@ -21,6 +21,7 @@ body {
   -webkit-font-smoothing: antialiased;
   color: @textGray;
   line-height: 1.5;
+  .font_size(15);
 }
 
 body * {
@@ -105,8 +106,23 @@ p a {
 
 ol,
 ul {
-  margin: 0 0 25px 0;
-  padding: 0 0 0 25px;
+  margin: 0 0 15px 0;
+  padding: 0 0 0 15px;
+  &.underline {
+    margin: 0;
+    padding: 0;
+    li {
+      border-bottom: 1px solid @lighterGray;
+      padding: 8px 0;
+      margin: 0;
+      &:last-child {
+        border-bottom: 0;
+      }
+      &:before {
+        display: none;
+      }
+    }
+  }
 }
 
 li {
@@ -125,8 +141,8 @@ li {
     height: 5px;
 
     position: absolute;
-    top: 10px;
-    left: -15px;
+    top: 8px;
+    left: -16px;
 
     background: #ccc;
     border-radius: 100%;
@@ -144,6 +160,9 @@ hr {
   margin: @spaced 0;
   &.thin {
     background: @lighterGray;
+  }
+  &.big {
+    margin: @spaced*2 0;
   }
   &.compact {
     margin: @spaced/3 0;
@@ -222,17 +241,34 @@ form input[type=password],
 form input[type=tel],
 form input[type=submit],
 form input[type=search],
+form input[type=url],
 form textarea {
   width: 100%;
   border-radius: 1px;
   box-shadow: none;
-  margin: 0 0 @fs-grid-gutter*2;
+  margin-bottom: 10px;
   padding: 15px;
   background: @bgGray;
   -webkit-font-smoothing: antialiased;
   &:focus {
-    //border: 1px solid @textGray;
+    box-shadow: inset 0 0 0 1px fade(@gray, 20%);
+    background: @white;
   }
+}
+
+select {
+  appearance: none;
+  border: none;
+  box-shadow: inset 0 0 0 1px fade(@gray, 50%);
+  height: 40px;
+  line-height: 43px;
+  padding: 0 15px;
+  //min-width: 300px;
+  border-radius: 2px;
+  .font_size(14);
+  margin-bottom: 15px;
+  background: @white url('/assets/icon_down.svg') center right 10px no-repeat;
+  background-size: 12px auto;
 }
 
 form input[type=submit],
@@ -268,3 +304,50 @@ form input[type=search] {
   }
 
 }
+
+#no-support {
+  box-shadow: inset 0 0 0 1px fade(@error, 20%);
+  background: fade(@error, 10%);
+  padding: 20px 25px;
+  border-radius: 2px;
+  color: @white75;
+  a {
+    color: @error;
+  }
+}
+
+table {
+    width: 100%;
+    //min-width: 600px;
+    margin: 30px 0;
+
+    & th {
+      //.sans();
+      .font_size(12);
+      color: @gray;
+      letter-spacing: 0.2em;
+      padding: 0 15px 10px;
+      text-align: left;
+      text-transform: uppercase;
+    }
+
+    & td {
+      .font_size(14);
+
+      padding: 13px 15px 15px;
+
+      code {
+        .font_size(16);
+      }
+    }
+
+    & th,
+    & td {
+      border-bottom: 1px solid @lighterGray;
+      vertical-align: center;
+
+      &:first-child {
+        padding-left: 0;
+      }
+    }
+  }

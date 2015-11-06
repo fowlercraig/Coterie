@@ -7,6 +7,7 @@
 // @codekit-prepend "../bower_components/Formstone/dist/js/equalize.js"
 // @codekit-prepend "../bower_components/Formstone/dist/js/carousel.js"
 // @codekit-prepend "../bower_components/Formstone/dist/js/background.js"
+// @codekit-prepend "../bower_components/Formstone/dist/js/checkbox.js"
 
 
 // @codekit-prepend "../bower_components/components-modernizr/modernizr.js"
@@ -16,3 +17,8 @@
 // @codekit-prepend "../bower_components/imagesloaded/imagesloaded.pkgd.js"
 // @codekit-prepend "../bower_components/photoswipe/dist/photoswipe.min.js"
 // @codekit-prepend "../bower_components/photoswipe/dist/photoswipe-ui-default.min.js"
+
+// UI
+$(document).ready(function(){
+	$("input[type=checkbox], input[type=radio]").checkbox();
+});

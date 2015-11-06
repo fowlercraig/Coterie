@@ -2139,6 +2139,300 @@
 .fs-background-embed.fs-background-ready iframe {
   z-index: 0;
 }
+/**
+	 * @class
+	 * @name .fs-checkbox-element
+	 * @type element
+	 * @description Target elmement
+	 */
+/**
+	 * @class
+	 * @name .fs-checkbox
+	 * @type element
+	 * @description Base widget class
+	 */
+/**
+	 * @class
+	 * @name .fs-checkbox.fs-checkbox-checked
+	 * @type modifier
+	 * @description Indicates checked state
+	 */
+/**
+	 * @class
+	 * @name .fs-checkbox.fs-checkbox-radio
+	 * @type modifier
+	 * @description Indicates radio interface
+	 */
+/**
+	 * @class
+	 * @name .fs-checkbox.fs-checkbox-toggle
+	 * @type modifier
+	 * @description Indicates toggle interface
+	 */
+/**
+	 * @class
+	 * @name .fs-checkbox.fs-checkbox-focus
+	 * @type modifier
+	 * @description Indicates focused state
+	 */
+/**
+	 * @class
+	 * @name .fs-checkbox.fs-checkbox-disabled
+	 * @type modifier
+	 * @description Indicates disabled state
+	 */
+.fs-checkbox {
+  /**
+		 * @class
+		 * @name .fs-checkbox-enabled
+		 * @type modifier
+		 * @description Indicates enabled state
+		 */
+  /**
+		 * @class
+		 * @name .fs-checkbox-label
+		 * @type element
+		 * @description Label element
+		 */
+  /**
+		 * @class
+		 * @name .fs-checkbox-marker
+		 * @type element
+		 * @description Marker element
+		 */
+  /**
+		 * @class
+		 * @name .fs-checkbox-flag
+		 * @type element
+		 * @description Flag element
+		 */
+}
+.fs-checkbox.fs-checkbox-enabled {
+  cursor: pointer;
+  margin: 0 0 10px 0;
+  overflow: hidden;
+}
+.fs-checkbox.fs-checkbox-enabled:focus {
+  box-shadow: none;
+  outline: none;
+}
+.fs-checkbox,
+.fs-checkbox:after,
+.fs-checkbox:before,
+.fs-checkbox *,
+.fs-checkbox *:after,
+.fs-checkbox *:before {
+  box-sizing: border-box;
+  -webkit-transition: none;
+          transition: none;
+  -webkit-user-select: none !important;
+     -moz-user-select: none !important;
+      -ms-user-select: none !important;
+          user-select: none !important;
+}
+.fs-checkbox-element_wrapper {
+  position: relative;
+  border: 0;
+  height: 0;
+  margin: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0;
+  width: 0;
+}
+.fs-checkbox-element {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  pointer-events: none;
+  -webkit-transition: none;
+          transition: none;
+}
+.fs-checkbox-label {
+  color: #666;
+  cursor: pointer;
+  display: block;
+  font-size: 14px;
+  line-height: 20px;
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.fs-checkbox-marker {
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  cursor: pointer;
+  display: block;
+  float: left;
+  margin: 0 10px 0 0;
+}
+.fs-checkbox-flag {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+.fs-checkbox-flag:before {
+  width: 5px;
+  height: 10px;
+  border: 2px solid #999;
+  border-top: 0;
+  border-left: 0;
+  content: '';
+  display: block;
+  margin: 3px 0 0 6px;
+  -webkit-transition: -webkit-transform 0.15s ease;
+          transition: transform 0.15s ease;
+  -webkit-transform: rotate(45deg) scale(0);
+      -ms-transform: rotate(45deg) scale(0);
+          transform: rotate(45deg) scale(0);
+}
+.fs-checkbox-checked .fs-checkbox-flag:before {
+  -webkit-transform: rotate(45deg) scale(1);
+      -ms-transform: rotate(45deg) scale(1);
+          transform: rotate(45deg) scale(1);
+}
+.no-csstransforms .fs-checkbox-flag:before {
+  width: 100%;
+  height: 100%;
+  content: "\2713";
+  display: none;
+  line-height: 1;
+  text-align: center;
+}
+.no-csstransforms .fs-checkbox-checked .fs-checkbox-flag:before {
+  display: block;
+}
+.fs-checkbox-radio .fs-checkbox-marker {
+  border-radius: 100%;
+}
+.fs-checkbox-radio .fs-checkbox-flag {
+  background: #999;
+  border: 3px solid #fff;
+  border-radius: 100%;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: -webkit-transform 0.15s ease;
+          transition: transform 0.15s ease;
+}
+.fs-checkbox-radio .fs-checkbox-flag:before {
+  display: none;
+}
+.fs-checkbox-radio.fs-checkbox-checked .fs-checkbox-flag {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+.fs-checkbox-radio.fs-checkbox-checked .fs-checkbox-flag:before {
+  display: none;
+}
+.no-csstransforms .fs-checkbox-radio .fs-checkbox-flag:before {
+  display: none;
+}
+.no-csstransforms .fs-checkbox-radio.fs-checkbox-checked .fs-checkbox-flag:before {
+  display: block;
+}
+.fs-checkbox-focus .fs-checkbox-label {
+  color: #333;
+}
+.fs-checkbox-focus .fs-checkbox-marker {
+  border-color: #999;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.fs-checkbox-disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+.fs-checkbox-disabled .fs-checkbox-label {
+  color: #666;
+  cursor: default;
+}
+.fs-checkbox-disabled .fs-checkbox-marker {
+  border-color: #ccc;
+  cursor: default;
+}
+.fs-checkbox-toggle {
+  position: relative;
+}
+.fs-checkbox-toggle .fs-checkbox-label {
+  line-height: 40px;
+}
+.fs-checkbox-toggle .fs-checkbox-marker {
+  width: 100px;
+  height: 40px;
+  position: relative;
+  border-radius: 3px;
+}
+.fs-checkbox-toggle .fs-checkbox-marker:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+.fs-checkbox-toggle .fs-checkbox-flag {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #999;
+  border: 2px solid #fff;
+  border-radius: 3px;
+  display: block;
+  margin: 0;
+  -webkit-transition: left 0.15s ease;
+          transition: left 0.15s ease;
+}
+.fs-checkbox-toggle .fs-checkbox-flag:before {
+  display: none;
+}
+.fs-checkbox-toggle .fs-checkbox-flag:after {
+  width: 2px;
+  height: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  box-shadow: 3px 0 0 #fff, -3px 0 0 #fff;
+  content: '';
+  margin: auto;
+  opacity: 0.75;
+}
+.no-touch .fs-checkbox-toggle:hover .fs-checkbox-flag:after {
+  opacity: 1;
+}
+.fs-checkbox-toggle.fs-checkbox-checked .fs-checkbox-flag {
+  left: 50%;
+}
+.fs-checkbox-toggle.fs-checkbox-checked .fs-checkbox-flag:before {
+  display: none;
+}
+.fs-checkbox-toggle.fs-checkbox-disabled .fs-checkbox-flag:after {
+  display: none;
+}
+.fs-checkbox-toggle .fs-checkbox-state {
+  width: 50%;
+  color: #666;
+  display: block;
+  font-size: 12px;
+  line-height: 40px;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+.fs-checkbox-toggle .fs-checkbox-state_on {
+  float: left;
+}
+.fs-checkbox-toggle .fs-checkbox-state_off {
+  float: right;
+}
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
@@ -3726,6 +4020,17 @@ img.rounded {
 .hidden {
   display: none;
 }
+.ss-gizmo:before,
+.ss-gizmo:after {
+  position: relative;
+  top: .125em;
+}
+.ss-gizmo:before {
+  margin-right: 8px;
+}
+.ss-gizmo:after {
+  margin-left: 8px;
+}
 *:link,
 *:visited,
 *:active,
@@ -3745,6 +4050,8 @@ body {
   -webkit-font-smoothing: antialiased;
   color: #666666;
   line-height: 1.5;
+  font-size: 15px;
+  font-size: 0.9375rem;
 }
 body * {
   word-wrap: break-word;
@@ -3828,8 +4135,27 @@ p a {
 }
 ol,
 ul {
-  margin: 0 0 25px 0;
-  padding: 0 0 0 25px;
+  margin: 0 0 15px 0;
+  padding: 0 0 0 15px;
+}
+ol.underline,
+ul.underline {
+  margin: 0;
+  padding: 0;
+}
+ol.underline li,
+ul.underline li {
+  border-bottom: 1px solid #E6E5E6;
+  padding: 8px 0;
+  margin: 0;
+}
+ol.underline li:last-child,
+ul.underline li:last-child {
+  border-bottom: 0;
+}
+ol.underline li:before,
+ul.underline li:before {
+  display: none;
 }
 li {
   position: relative;
@@ -3845,8 +4171,8 @@ li:before {
   width: 5px;
   height: 5px;
   position: absolute;
-  top: 10px;
-  left: -15px;
+  top: 8px;
+  left: -16px;
   background: #ccc;
   border-radius: 100%;
   content: '';
@@ -3862,6 +4188,9 @@ hr {
 }
 hr.thin {
   background: #E6E5E6;
+}
+hr.big {
+  margin: 50px 0;
 }
 hr.compact {
   margin: 8.33333333px 0;
@@ -3921,14 +4250,42 @@ form input[type=password],
 form input[type=tel],
 form input[type=submit],
 form input[type=search],
+form input[type=url],
 form textarea {
   width: 100%;
   border-radius: 1px;
   box-shadow: none;
-  margin: 0 0 3.4%;
+  margin-bottom: 10px;
   padding: 15px;
   background: #F2F2F2;
   -webkit-font-smoothing: antialiased;
+}
+form input[type=text]:focus,
+form input[type=email]:focus,
+form input[type=password]:focus,
+form input[type=tel]:focus,
+form input[type=submit]:focus,
+form input[type=search]:focus,
+form input[type=url]:focus,
+form textarea:focus {
+  box-shadow: inset 0 0 0 1px rgba(153, 153, 153, 0.2);
+  background: #fff;
+}
+select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  box-shadow: inset 0 0 0 1px rgba(153, 153, 153, 0.5);
+  height: 40px;
+  line-height: 43px;
+  padding: 0 15px;
+  border-radius: 2px;
+  font-size: 14px;
+  font-size: 0.875rem;
+  margin-bottom: 15px;
+  background: #fff url('/assets/icon_down.svg') center right 10px no-repeat;
+  background-size: 12px auto;
 }
 form input[type=submit],
 form input[type=search] {
@@ -4178,6 +4535,47 @@ form input[type=search]-burg {
   height: 3px;
   background: url('dot.svg');
   background-size: contain;
+}
+#no-support {
+  box-shadow: inset 0 0 0 1px rgba(214, 66, 66, 0.2);
+  background: rgba(214, 66, 66, 0.1);
+  padding: 20px 25px;
+  border-radius: 2px;
+  color: rgba(255, 255, 255, 0.75);
+}
+#no-support a {
+  color: #D64242;
+}
+table {
+  width: 100%;
+  margin: 30px 0;
+}
+table th {
+  font-size: 12px;
+  font-size: 0.75rem;
+  color: #999;
+  letter-spacing: 0.2em;
+  padding: 0 15px 10px;
+  text-align: left;
+  text-transform: uppercase;
+}
+table td {
+  font-size: 14px;
+  font-size: 0.875rem;
+  padding: 13px 15px 15px;
+}
+table td code {
+  font-size: 16px;
+  font-size: 1rem;
+}
+table th,
+table td {
+  border-bottom: 1px solid #E6E5E6;
+  vertical-align: center;
+}
+table th:first-child,
+table td:first-child {
+  padding-left: 0;
 }
 @font-face {
   font-family: 'Maison Mono';
@@ -4889,6 +5287,12 @@ form input[type=search]-burg {
   padding-top: 0;
   padding-bottom: 0;
 }
+#header--nav_cart .cart-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+#header--nav_cart .cart-footer .btn {
+  margin-bottom: 0;
+}
 #header--nav_cart .cart-items {
   max-height: 420px;
   overflow: scroll;
@@ -4901,6 +5305,7 @@ form input[type=search]-burg {
 }
 #footer a {
   color: inherit;
+  margin-bottom: 0;
 }
 #footer a:hover {
   color: #fff;
@@ -5072,7 +5477,8 @@ form input[type=search]-burg {
 .page-content h4,
 .page-content h5,
 .page-content h6 {
-  color: #005CA9;
+  color: #4d4d4d;
+  font-weight: 500;
 }
 .page-content-green h1,
 .page-content-green h2,

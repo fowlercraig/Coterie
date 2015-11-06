@@ -1,31 +1,29 @@
+<?php include ('parts/page-header.php'); ?>
+
 <div class="fs-row">
-	<div class="fs-cell fs-lg-4 fs-md-2 fs-sm-3">
-		<p class="emphasized">Timeline</p>
+	<div class="fs-cell fs-lg-4 fs-md-6 fs-sm-3">
+		<h2>Co-te-rie Store</h2>
 		<p>
-			917 SW Oak Street #2004<br>
-			Portland, Oregon 97205<br>
-			+1 503 765 8056
-		</p>
-		<p>
-			M-F by Appointment
+			1234 Rowena Street<br>
+			Los Angeles, CA 91234<br>
+			<span class="btn-icon ss-gizmo ss-phone">213 765 8056</span>
 		</p>
 	</div>
-	<div class="fs-cell fs-lg-8 fs-md-4 fs-sm-3">
+	<hr class="fs-cell fs-lg-hide fs-md-6 fs-sm-3 invisible compact">
+	<div class="fs-cell fs-lg-7 fs-md-6 fs-sm-3 fs-right">
 		<img src="http://placehold.it/800x475/eeeeee/eeeeee" class="img-responsive">
 	</div>
 </div>
 
-<hr class="invisible">
-<hr class="invisible">
-<hr class="invisible">
+<hr class="invisible big">
 
 <div class="fs-row">
-	<div class="fs-cell fs-lg-4 fs-md-2 fs-sm-3">
-		<p class="emphasized">Commercial Inquiries</p>
-		<p>Please fill out the form so we can better assist with your commercial application.</p>
-		<a href="#" class="btn btn-primary">Purchase Sample Pack</a>
+	<div class="fs-cell fs-lg-4 fs-md-6 fs-sm-3">
+		<h2>General Inquiries</h2>
+		<p>Drop us a line and we'll get back to you asap.</p>
 	</div>
-	<div class="fs-cell fs-lg-8 fs-md-4 fs-sm-3">
+	<hr class="fs-cell fs-lg-hide fs-md-6 fs-sm-3 invisible compact">
+	<div class="fs-cell fs-lg-7 fs-md-6 fs-sm-3 fs-right">
 		<form class="fs-row">
 			<input type="text" class="fs-cell fs-all-half" placeholder="First Name">
 			<input type="text" class="fs-cell fs-all-half" placeholder="Last Name">
@@ -39,3 +37,6 @@
 		</form>
 	</div>
 </div>
+
+<hr class="invisible big">
+<hr class="invisible big">
