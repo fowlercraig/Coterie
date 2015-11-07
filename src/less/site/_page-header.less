@@ -109,12 +109,16 @@
 		}
 	}
 
+	::-webkit-scrollbar {
+			display: none;
+		}
+
 	&-filters {
 		//padding: @spaced/2 0;
 		overflow-y: hidden;
 		overflow-x: scroll;
 		-webkit-overflow-scrolling: touch;
-		::-webkit-scrollbar {
+		&::-webkit-scrollbar {
 			display: none;
 		}
 		a {

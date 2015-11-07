@@ -5525,12 +5525,15 @@ table td:first-child {
       -ms-transform: translateY(-100%);
           transform: translateY(-100%);
 }
+.page ::-webkit-scrollbar {
+  display: none;
+}
 .page-filters {
   overflow-y: hidden;
   overflow-x: scroll;
   -webkit-overflow-scrolling: touch;
 }
-.page-filters ::-webkit-scrollbar {
+.page-filters::-webkit-scrollbar {
   display: none;
 }
 .page-filters a {
