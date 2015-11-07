@@ -111,10 +111,21 @@
 
 	&-filters {
 		//padding: @spaced/2 0;
+		overflow-y: hidden;
+		overflow-x: scroll;
+		-webkit-overflow-scrolling: touch;
+		::-webkit-scrollbar {
+			display: none;
+		}
 		a {
 			color: @gray;
 			&:hover {
 				color: @black;
+			}
+		}
+		&--inner {
+			@media @min {
+				width: auto;
 			}
 		}
 	}

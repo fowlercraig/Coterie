@@ -18,8 +18,7 @@
          <nav id="header--nav_right" class="fs-cell fs-lg-half fs-md-2 fs-sm-2 text-right cart-swap">
             <a href="#" class="btn btn-nav swap" data-swap-target=".about-swap">about</a>
             <a id="search-start" href="?page=search" class="btn btn-nav swap search-launch" data-swap-target=".search-swap" data-swap-linked=".search-launch">search</a>
-            <a href="#" class="btn btn-nav swap right btn-last cart-launch fs-sm-hide" data-swap-target=".cart-swap" data-swap-linked=".cart-launch">cart (3)</a>
-            <a href="?page=cart" class="btn btn-nav btn-last fs-md-hide fs-lg-hide">cart (3)</a>
+            <a href="#" class="btn btn-nav swap right btn-last cart-launch" data-swap-target=".cart-swap" data-swap-linked=".cart-launch">cart (3)</a>
             <?php include('parts/cart-header.php'); ?>
          </nav>
       </div>

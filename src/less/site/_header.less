@@ -155,6 +155,11 @@
       }
       &_cart {
          //height: 400px;
+         @media @min {
+            left: @fs-grid-gutter*6;
+            right: @fs-grid-gutter*6;
+            position: fixed;
+         }
          @media @tablet {
             width: 400px;
          }
@@ -203,7 +208,12 @@
                }
             }
             &-items {
-               max-height: 420px;
+               @media @min {
+                  max-height: 300px;   
+               }
+               @media @tablet {
+                  max-height: 420px;   
+               }
                overflow: scroll;
             }
          }
