@@ -13,6 +13,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/15_09_23_m6.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 181063,
+		"inputAbbreviatedPath": "\/assets\/15_09_23_m6.jpg",
+		"outputAbbreviatedPath": "\/assets\/15_09_23_m6.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/collection-bg.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -218,6 +229,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/ornhansen-generalstore-portland-oregon.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 339572,
+		"inputAbbreviatedPath": "\/assets\/ornhansen-generalstore-portland-oregon.jpg",
+		"outputAbbreviatedPath": "\/assets\/ornhansen-generalstore-portland-oregon.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/respond-proxy.html": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -237,6 +259,17 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
+		},
+	"\/assets\/SnakeOilProvisions_102114_029_blog.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 321583,
+		"inputAbbreviatedPath": "\/assets\/SnakeOilProvisions_102114_029_blog.jpg",
+		"outputAbbreviatedPath": "\/assets\/SnakeOilProvisions_102114_029_blog.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
 		},
 	"\/assets\/vendor.min.css": {
 		"fileType": 16,

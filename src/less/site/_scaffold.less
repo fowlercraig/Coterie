@@ -1,8 +1,16 @@
-#content {
+.fs-row.fs-row-full {
+  margin: 0 -@fs-grid-gutter;
+  width: auto;
+}
 
-   @media @tablet {
-      padding: 0 @spaced;
-   }
+#wrapper {
+   max-width: 1600px;
+   margin: auto;
+}
+
+#wrapper {
+
+   padding: 0 @spaced;
 
    &.fixed-header {
 
@@ -16,8 +24,7 @@
 
    display: block;
    background: @bgGray;
-   margin-top: @fs-grid-gutter*2 ;
-   margin-bottom: @fs-grid-gutter*2;
+   margin: @fs-grid-gutter 0 ;
 
    &.small {
       height: 400px;
@@ -25,6 +32,12 @@
 
    &.medium {
       height: 800px + @spaced;
+   }
+
+   &.half {
+      width: 50%;
+      display: inline-block;
+      margin: 0 -1px;
    }
 
 }

@@ -252,3 +252,18 @@ img.rounded {
     margin-left: 8px;
   }
 }
+
+.covered {
+  .cover();
+  //z-index: 999;
+}
+
+.overlay {
+  &:before {
+    content: '';
+    .cover();
+    background: @black75;
+    z-index: 2;
+  }
+}
+

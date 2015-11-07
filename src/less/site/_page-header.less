@@ -3,16 +3,18 @@
 	&-header {
 
 		@media @min {
-			padding: @spaced 0 @spaced;	
+			height: 180px;
 		}
 		@media @mobile {
-			padding: @spaced*2 0;	
+			height: 220px;
 		}
 		@media @tablet {
-			padding: @spaced*3 0;	
+			padding: 0;
+			height: 220px;
 		}
 		@media @desktop {
-			padding: @spaced*4 0;	
+			//padding: @spaced*4 0;	
+			height: 300px;
 		}
 		
 		position: relative;
@@ -53,14 +55,28 @@
 
 	&-title {
 		text-transform: lowercase;
-		.font_size(50);
+		@media @min {
+			.font_size(32);	
+		}
+		@media @tablet {
+			.font_size(50);	
+		}
+		@media @desktop {
+			.font_size(50);	
+		}
 		margin-bottom: 0;
 		font-weight: normal;
 		line-height: 1;
 		color: @black;
 		.transition();
 		&:after {
-			content: '.'
+			//content: '.'
+		}
+		span {
+			color: @lightGray;
+			@media @tablet {
+				//float: right;
+			}
 		}
 		&_search {
 			display: block;
@@ -94,7 +110,7 @@
 	}
 
 	&-filters {
-		padding: @spaced/2 0;
+		//padding: @spaced/2 0;
 		a {
 			color: @gray;
 			&:hover {

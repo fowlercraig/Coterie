@@ -1,15 +1,3 @@
-<?php if($page == 'index'): ?>
-<div class="page-header">
-   <div class="fs-row">
-      <div class="fs-cell fs-all-full">
-         <div class="page-title_wrapper">
-            <h1 class="page-title">co-te-rie</h1>
-         </div>
-      </div>
-   </div>
-</div>
-<?php endif; ?>
-
 <div id="header-wrapper">
    <header id="header" class="menu-swap about-swap <?php if($page == 'index'): ?>home<?php endif; ?>">
       <div class="fs-row">
@@ -21,11 +9,11 @@
             <?php if( $page != 'index'): ?>
             <a href="/" class="btn btn-nav btn-first active">co-te-rie</a>
             <?php endif; ?>
-            <a href="?page=men" class="btn btn-nav">men</a>
-            <a href="?page=women" class="btn btn-nav">women</a>
-            <a href="?page=accessories" class="btn btn-nav">accessories</a>
-            <a href="?page=sale" class="btn btn-nav">sale</a>
-            <a href="?page=brands" class="btn btn-nav">brands</a>
+            <a href="?page=collection&name=men" class="btn btn-nav">men</a>
+            <a href="?page=collection&name=women" class="btn btn-nav">women</a>
+            <a href="?page=collection&name=accessories" class="btn btn-nav">accessories</a>
+            <a href="?page=collection&name=sale" class="btn btn-nav">sale</a>
+            <a href="?page=collection&name=brands" class="btn btn-nav">brands</a>
          </nav>
          <nav id="header--nav_right" class="fs-cell fs-lg-half fs-md-2 fs-sm-2 text-right cart-swap">
             <a href="#" class="btn btn-nav swap right fs-sm-hide" data-swap-target=".about-swap">about</a>
@@ -40,3 +28,15 @@
 </div>
 
 <?php include('parts/search-header.php'); ?>
+
+<?php if($page == 'index'): ?>
+<div class="page-header">
+   <div class="fs-row">
+      <div class="fs-cell fs-all-full">
+         <div class="page-title_wrapper">
+            <h1 class="page-title">co-te-rie</h1>
+         </div>
+      </div>
+   </div>
+</div>
+<?php endif; ?>

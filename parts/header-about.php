@@ -14,5 +14,5 @@
 			</div>
 		</div>
 	</div>
-	<div id="about-header_bg"></div>
+	<div id="about-header_bg" class="overlay wallpaper covered" data-background-options='{"source":"/assets/SnakeOilProvisions_102114_029_blog.jpg"}'></div>
 </div>
