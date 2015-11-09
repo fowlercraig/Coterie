@@ -12,11 +12,9 @@
   </div>
   <div class="product--grid-info">
     <a href="?page=product&collection=<?php echo $_GET['name']; ?>&name=Army Shirt">
+      <small class="color-grey"><span class="product--grid-vendor">Common Projects</span></small><br>
       <span class="product--grid-title color-black">Product Title</span><br>
-      <small class="color-grey">
-        <span class="product--grid-vendor">Common Projects</span> / 
-        <span class="product--grid-price">$30.00</span>
-      </small>
+      <small class="color-grey"><span class="product--grid-price">$30.00</span></small>
     </a>
   </div>
   <hr class="invisible">
