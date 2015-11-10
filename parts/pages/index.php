@@ -1,3 +1,5 @@
+<?php include ('parts/page-header.php'); ?>
+
 <div id="index">
 	<div class="home-module home-module--nomargin_top wallpaper banner banner-large fs-cell fs-full-all" data-background-options='{"source":{"0px":"/assets/IMG_1406-mobile.jpg","740px":"/assets/IMG_1406.jpg"}}'>
 		<div class="centered centered-top centered-full fs-all-full fs-md-6 fs-sm-3 fs-contained">

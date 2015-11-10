@@ -1,44 +1,31 @@
-<?php
+<?php include ('parts/page-header.php'); ?>
 
-   $cart_Total = '$300';
+<?php $width = 'fs-cell fs-xl-fourth fs-lg-fourth fs-md-2 fs-sm-1 fs-xs-full'; ?>
 
-?>
+<div class="product-grid fs-row">
+  <div class="product-grid_item <?php echo $width; ?>"><?php include('parts/cart-grid--item.php'); ?></div>
+  <div class="product-grid_item <?php echo $width; ?>"><?php include('parts/cart-grid--item.php'); ?></div>
+  <div class="product-grid_item <?php echo $width; ?>"><?php include('parts/cart-grid--item.php'); ?></div>
+  <div class="product-grid_item <?php echo $width; ?>"><?php include('parts/cart-grid--item.php'); ?></div>
+  <div class="product-grid_item <?php echo $width; ?>"><?php include('parts/cart-grid--item.php'); ?></div>
+  <div class="product-grid_item <?php echo $width; ?>"><?php include('parts/cart-grid--item.php'); ?></div>
+  <div class="product-grid_item <?php echo $width; ?>"><?php include('parts/cart-grid--item.php'); ?></div>
+  <div class="product-grid_item <?php echo $width; ?>"><?php include('parts/cart-grid--item.php'); ?></div>
+  <div class="product-grid_item <?php echo $width; ?>"><?php include('parts/cart-grid--item.php'); ?></div>
+  <div class="product-grid_item <?php echo $width; ?>"><?php include('parts/cart-grid--item.php'); ?></div>
+  <div class="product-grid_item <?php echo $width; ?>"><?php include('parts/cart-grid--item.php'); ?></div>
+  <div class="product-grid_item <?php echo $width; ?>"><?php include('parts/cart-grid--item.php'); ?></div>
+</div>
 
-<div id="cart" class="fs-grid">
-   <div class="fs-row">
-      <div class="fs-cell fs-all-full">
-         <form action="/cart" method="post" novalidate class="cart table-wrap">
-
-            <header class="fs-row">
-               <hr class="fs-cell fs-all-full divider">
-               <div class="fs-cell fs-lg-4 fs-md-3 fs-sm-half fs-lg-push-2 text-left">Product</div>
-               <div class="fs-cell fs-lg-2 fs-md-1 fs-sm-hide text-center">Price</div>
-               <div class="fs-cell fs-lg-2 fs-md-1 fs-sm-fourth text-center">Quantity</div>
-               <div class="fs-cell fs-lg-2 fs-md-1 fs-sm-fourth text-right">Total</div>
-               <hr class="fs-cell fs-all-full divider">
-            </header>
-
-            <div class="cart-content fs-row">
-               <?php include ('parts/cart-item.php'); ?>
-               <?php include ('parts/cart-item.php'); ?>
-               <?php include ('parts/cart-item.php'); ?>
-            </div>
-
-            <div class="cart-info fs-row">
-               <div class="fs-cell fs-lg-7 fs-md-3 fs-sm-3">
-                  <label for="cart-instructions">Special Instructions for Seller</label>
-                  <textarea name="note" class="input-full" id="cart-instructions"></textarea>
-               </div>
-               <div class="cart-total fs-cell fs-lg-4 fs-md-3 fs-sm-3 fs-right text-right">
-                  <span class="cart-total-price"><small>SUBTOTAL</small> <strong><?php echo $cart_Total; ?></strong></span><br>
-                  <span class="cart-total-shipping"><small>Shipping and taxes calculated at checkout.</small></span><br><br>
-                  <a class="cart-total-update btn btn-secondary">Update Cart</a>
-                  <a class="cart-total-update btn btn-primary">Checkout</a>
-               </div>
-               <hr class="fs-cell fs-all-full divider">
-            </div>
-
-         </form>
+<div id="cart-footer">
+  <div class="content">
+    <div class="fs-row">
+      <div class="fs-cell fs-xl-fourth fs-lg-half fs-md-4 fs-sm-full fs-right">
+        <div class="fs-row">
+          <div class="fs-cell fs-all-half"><a href='#' class="btn btn-full btn-icon btn-outline ss-gizmo ss-loading right">update</a></div>
+          <div class="fs-cell fs-all-half"><a href='?page=cart&name=your cart' class="btn btn-full btn-icon btn-primary inverted ss-gizmo ss-right right">checkout</a></div>
+        </div>
       </div>
-   </div>
+    </div>
+  </div>
 </div>

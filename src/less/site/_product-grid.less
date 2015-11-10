@@ -16,6 +16,10 @@
 
    &-item {
       overflow: hidden;
+      &_cart {
+         overflow: visible;
+         margin-bottom: @spaced;
+      }
    }
 
    &-thumb {
@@ -31,6 +35,32 @@
          }
          .product--grid-thumb_controls {
             transform: translateY(0);
+         }
+      }
+      &_nohover {
+         overflow: visible;
+         &:hover {
+            img {
+               transform: translateY(0);
+            }
+         }
+      }
+      &_delete {
+         position: absolute;
+         background: @black;
+         color: @white;
+         text-align: center;
+         display: block;
+         border-radius: 50%;
+         width: @spaced*.8;
+         height: @spaced*.8;
+         line-height: @spaced*.8;
+         transform: translate(-50%, -50%);
+         z-index: 88;
+
+         &:before {
+            position: relative;
+            top: .125em;
          }
       }
       &_controls {
@@ -53,6 +83,17 @@
 
    &-title {
       margin: 0;
+   }
+
+   &-info {
+      &_right {
+         @media @min {
+            text-align: left;
+         }
+         @media @tablet {
+            text-align: right;
+         }
+      }
    }
 
    &-cell {

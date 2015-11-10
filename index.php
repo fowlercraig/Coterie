@@ -39,8 +39,8 @@
 <div id="wrapper" class="menu-swap">
 <?php include('parts/header.php') ?>
 <div id="content"><?php include('parts/content.php') ?></div>
-<?php include('parts/footer.php') ?>
 </div>
+<?php include('parts/footer.php') ?>
 
 <script type='text/javascript' src='../coterie-3-50132868/assets/vendor.min.js'></script>
 <script type='text/javascript' src='../coterie-3-50132868/assets/main.min.js'></script>

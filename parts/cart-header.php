@@ -12,11 +12,11 @@
       <?php include('cart-content.php'); ?>
       <?php include('cart-content.php'); ?>
    </div>
-   <div class="cart-footer">
+   <div class="cart-footer fs-cell fs-all-full">
       <div class="wrapper">
          <div class="fs-row">
             <div class="fs-cell fs-all-half"><a href='#' class="btn btn-full btn-icon btn-outline ss-gizmo ss-loading right">update</a></div>
-            <div class="fs-cell fs-all-half"><a href='#' class="btn btn-full btn-icon btn-primary inverted ss-gizmo ss-right right">checkout</a></div>
+            <div class="fs-cell fs-all-half"><a href='?page=cart&name=your cart' class="btn btn-full btn-icon btn-primary inverted ss-gizmo ss-right right">checkout</a></div>
          </div>
       </div>
    </div>

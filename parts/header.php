@@ -27,15 +27,3 @@
 </div>
 
 <?php include('parts/search-header.php'); ?>
-
-<?php if($page == 'index'): ?>
-<div class="page-header">
-   <div class="fs-row">
-      <div class="fs-cell fs-all-full">
-         <div class="page-title_wrapper">
-            <h1 class="page-title">co-te-rie</h1>
-         </div>
-      </div>
-   </div>
-</div>
-<?php endif; ?>

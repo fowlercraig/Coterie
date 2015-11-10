@@ -1,0 +1,17 @@
+#cart {
+  &-footer {
+    background: fade(@black, 95%);
+    z-index: 99;
+    left: 0;
+    width: 100%;
+    padding: @spaced/2 0;
+    .btn {
+      margin-bottom: 0;
+    }
+    @media @min {
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+  }
+}

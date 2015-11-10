@@ -13,8 +13,7 @@
 			height: 220px;
 		}
 		@media @desktop {
-			//padding: @spaced*4 0;	
-			height: 300px;
+			height: 250px;
 		}
 		
 		position: relative;
@@ -74,8 +73,15 @@
 		}
 		span {
 			color: @lightGray;
+		}
+		&_sub {
+			color: @black!important;
+			@media @min {
+				display: block;
+				float: none;
+			}
 			@media @tablet {
-				//float: right;
+				float: right;
 			}
 		}
 		&_search {
