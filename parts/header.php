@@ -3,11 +3,11 @@
       <div class="fs-row">
          <nav id="header--nav_left" class="fs-cell fs-lg-hide fs-md-hide fs-sm-1">
             <a href="#" id="header-menu" class="btn btn-nav btn-hamburg">&nbsp;</a>
-            <a href="/" class="btn btn-nav btn-first btn-logo">co-te-rie</a>
+            <a href="/" class="btn btn-nav btn-first btn-logo"><?php echo $siteName; ?></a>
          </nav>
          <nav id="header--nav_left" class="fs-cell fs-lg-half fs-md-4 fs-sm-hide navigation">
             <?php if( $page != 'index'): ?>
-            <a href="/" class="btn btn-nav btn-first active">co-te-rie</a>
+            <a href="/" class="btn btn-nav btn-first active"><?php echo $siteName; ?></a>
             <?php endif; ?>
             <a href="?page=collection&name=men" class="btn btn-nav">men</a>
             <a href="?page=collection&name=women" class="btn btn-nav">women</a>

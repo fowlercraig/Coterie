@@ -4622,6 +4622,48 @@ table td:first-child {
   font-weight: 400;
   font-style: normal;
 }
+.spinner {
+  width: 70px;
+}
+.spinner > div {
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+@-webkit-keyframes sk-bouncedelay {
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes sk-bouncedelay {
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
 .btn {
   cursor: pointer;
   display: inline-block;
@@ -5687,6 +5729,49 @@ table td:first-child {
 }
 .collection--sort .btn {
   margin-bottom: 0;
+}
+#splash {
+  color: #fff;
+  z-index: 999;
+}
+#splash a,
+#splash h1,
+#splash h2,
+#splash h3,
+#splash h4,
+#splash h5,
+#splash p {
+  color: inherit;
+}
+#splash.loaded {
+  -webkit-transition: 500ms ease;
+          transition: 500ms ease;
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
+}
+#splash--title {
+  font-size: 60px;
+  font-size: 3.75rem;
+}
+#splash_centered {
+  width: 100%;
+}
+#splash--bg,
+#splash--overlay {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+#splash--bg {
+  z-index: 1;
+  background-size: cover;
+}
+#splash--overlay {
+  background-color: rgba(0, 0, 0, 0.25);
+  z-index: 2;
 }
 #about-header {
   opacity: 0;

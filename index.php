@@ -1,3 +1,4 @@
+<?php include ('parts/config.php'); ?>
 
 <!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
@@ -6,7 +7,7 @@
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Coterie</title>
+<title><?php echo $siteName; ?></title>
 <meta name="description" content="">
 <link rel="shortcut icon" href="../coterie-3-50132868/assets/favicon.ico">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -35,7 +36,7 @@
  ?>
 
 <body class="fs-grid fs-grid-fluid page-<?php echo $page; ?>">
-
+<?php if ($page = 'index'): ?><?php include ('parts/page-splash.php'); ?><?php endif; ?>
 <div id="wrapper" class="menu-swap">
 <?php include('parts/header.php') ?>
 <div id="content"><?php include('parts/content.php') ?></div>

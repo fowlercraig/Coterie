@@ -2,6 +2,17 @@
 // @codekit-append "_mobilemenu.js"
 // @codekit-append "_swipe.js"
 
+function splashLoaded(){
+  $(window).load(function(){
+    setTimeout(function(){
+      $('#splash').addClass('loaded');
+      setTimeout(function(){
+        $('#splash').remove();
+      },500);
+    }, 5000);
+  });
+}
+
 function searchClick(){
 
   $('#search-start').on('click', function(){
@@ -56,4 +67,5 @@ $(document).ready(function(){
 	});
 	$(".swap").swap();
    searchClick();
+   splashLoaded();
 });
