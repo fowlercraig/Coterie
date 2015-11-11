@@ -5746,6 +5746,7 @@ table td:first-child {
 #splash {
   color: #fff;
   z-index: 999;
+  padding-top: 70px;
 }
 #splash a,
 #splash h1,
@@ -5763,10 +5764,6 @@ table td:first-child {
       -ms-transform: translateY(100%);
           transform: translateY(100%);
 }
-#splash--title {
-  font-size: 60px;
-  font-size: 3.75rem;
-}
 #splash_centered {
   width: 100%;
 }
@@ -5777,6 +5774,7 @@ table td:first-child {
   position: absolute;
   top: 0;
   width: 100%;
+  position: fixed;
 }
 #splash--bg {
   z-index: 1;

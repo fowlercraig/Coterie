@@ -1,7 +1,8 @@
 #splash {
 
 	color: @white;
-	z-index: 999;
+	z-index: 999;	
+	padding-top: 70px;
 
 	a,h1,h2,h3,h4,h5,p {
 		color: inherit;
@@ -13,7 +14,7 @@
 	}
 
 	&--title {
-		.font_size(60);
+		//.font_size(60);
 	}
 
 	&_centered {
@@ -22,6 +23,7 @@
 
 	&--bg, &--overlay {
 		.cover();
+		position: fixed;
 	}
 
 	&--bg {
