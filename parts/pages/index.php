@@ -1,7 +1,7 @@
 <?php include ('parts/page-header.php'); ?>
 
 <div id="index">
-	<div class="carousel">
+	<div class="carousel" data-carousel-options='{"controls":{"container":".carousel--controls","next":".carousel--next","previous":".carousel--prev"}}'>
 		<div class="carousel--slide">
 			<div class="home-module home-module--nomargin_top wallpaper banner banner-large fs-cell fs-full-all" data-background-options='{"source":{"0px":"/assets/IMG_1406-mobile.jpg","740px":"/assets/IMG_1406.jpg"}}'>
 				<div class="centered centered-top centered-full fs-all-full fs-md-6 fs-sm-3 fs-contained">
@@ -10,8 +10,10 @@
 							<p>
 								new arrivals:<br>
 								<a href="?page=brand">common projects.</a><br>
-								<small><a href="#" class='ss-gizmo ss-left btn-icon btn-first'></a></small>
-								<small><a href="#" class='ss-gizmo ss-right btn-icon btn-last'></a></small>
+								<div class="carousel--controls">
+									<small><button class='carousel--next ss-gizmo ss-left btn-icon btn-first'></button></small>
+									<small><button class='carousel--prev ss-gizmo ss-right btn-icon btn-last'></button></small>
+								</div>
 							</p>
 						</div>
 					</div>
@@ -19,15 +21,17 @@
 			</div>
 		</div>
 		<div class="carousel--slide">
-			<div class="home-module home-module--nomargin_top wallpaper banner banner-large fs-cell fs-full-all" data-background-options='{"source":{"0px":"/assets/IMG_1406-mobile.jpg","740px":"/assets/IMG_1406.jpg"}}'>
+			<div class="home-module home-module--nomargin_top wallpaper banner banner-large fs-cell fs-full-all" data-background-options='{"source":"/assets/IMG_1388.jpg"}'>
 				<div class="centered centered-top centered-full fs-all-full fs-md-6 fs-sm-3 fs-contained">
 					<div class="fs-row">
 						<div class="fs-cell fs-all-full text-left">
 							<p>
 								featured:<br>
 								<a href="?page=brand">shop tour.</a><br>
-								<small><a href="#" class='ss-gizmo ss-left btn-icon btn-first'></a></small>
-								<small><a href="#" class='ss-gizmo ss-right btn-icon btn-last'></a></small>
+								<div class="carousel--controls">
+									<small><button class='carousel--next ss-gizmo ss-left btn-icon btn-first'></button></small>
+									<small><button class='carousel--prev ss-gizmo ss-right btn-icon btn-last'></button></small>
+								</div>
 							</p>
 						</div>
 					</div>
