@@ -3894,6 +3894,12 @@ a.pswp__share--download:hover {
 .pswp--minimal--dark .pswp__top-bar {
   background: none;
 }
+.color-white {
+  color: #fff;
+}
+.color-white:hover {
+  color: #fff;
+}
 .color-black {
   color: #111;
 }
@@ -4348,6 +4354,10 @@ form input[type=submit].epm-submit-chimp:hover,
 form input[type=search].epm-submit-chimp:hover {
   background: #eaeaea;
 }
+form input[type=submit]-alignleft,
+form input[type=search]-alignleft {
+  text-align: left;
+}
 form input[type=submit]-full,
 form input[type=search]-full {
   width: 100%;
@@ -4691,6 +4701,9 @@ table td:first-child {
 .btn.btn-default:hover,
 .btn.epm-submit-chimp:hover {
   background: #eaeaea;
+}
+.btn-alignleft {
+  text-align: left;
 }
 .btn-full {
   width: 100%;
@@ -6037,10 +6050,33 @@ table td:first-child {
 #cart-footer .btn {
   margin-bottom: 0;
 }
+#cart-footer .divider {
+  margin-top: 12.5px;
+  margin-bottom: 12.5px;
+  background: rgba(255, 255, 255, 0.2);
+}
+@media screen and (min-width: 740px) {
+  #cart-footer p {
+    margin-bottom: 0;
+  }
+}
 @media screen and (min-width: 300px) {
   #cart-footer {
     position: fixed;
     width: 100%;
     bottom: 0;
   }
+}
+#cart-instructions {
+  max-height: 0px;
+  overflow: hidden;
+  -webkit-transition: 300ms ease;
+          transition: 300ms ease;
+}
+#cart-instructions.fs-swap-active {
+  max-height: 500px;
+}
+#cart-instructions_close a {
+  text-decoration: none;
+  border: 0;
 }

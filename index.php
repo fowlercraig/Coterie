@@ -36,7 +36,7 @@
  ?>
 
 <body class="fs-grid fs-grid-fluid page-<?php echo $page; ?>">
-<?php if ($page = 'index'): ?><?php include ('parts/page-splash.php'); ?><?php endif; ?>
+<?php if ($page = ''): ?><?php include ('parts/page-splash.php'); ?><?php endif; ?>
 <div id="wrapper" class="menu-swap">
 <?php include('parts/header.php') ?>
 <div id="content"><?php include('parts/content.php') ?></div>
