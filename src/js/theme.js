@@ -75,7 +75,7 @@ $(document).ready(function(){
 	});
 	$(".swap").swap();
    searchClick();
-   //splashLoaded();
+   splashLoaded();
 
   $("#btnAbout").hover(
     function() {
