@@ -1,5 +1,7 @@
+<hr class="divider nomargin">
 <div id="product--info">
    <header>
+      <br>
       <a href="?page=brand&name=Common Projects" class="color-gray">Common Projects</a>
       <hr class="invisible compact">
       <h1 id="product--title">
