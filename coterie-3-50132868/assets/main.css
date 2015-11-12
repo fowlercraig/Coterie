@@ -4908,12 +4908,12 @@ table td:first-child {
 }
 @media screen and (min-width: 300px) {
   .banner-medium {
-    height: 600px;
+    height: 250px;
   }
 }
 @media screen and (min-width: 740px) {
   .banner-medium {
-    height: 855px;
+    height: 455px;
   }
 }
 @media screen and (min-width: 980px) {
@@ -5348,6 +5348,17 @@ table td:first-child {
 #header.fs-swap-active a {
   color: #fff;
 }
+#header.fs-swap-active a.btn-hamburg:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -5px;
+  width: 1em;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 0 0 rgba(255, 255, 255, 0.5), 0 8px 0 0 rgba(255, 255, 255, 0.5);
+}
 #header--active {
   position: relative;
   height: 0;
@@ -5363,12 +5374,12 @@ table td:first-child {
   position: relative;
 }
 #header--nav_cart {
-  z-index: 99;
-  background: rgba(17, 17, 17, 0.95);
-  color: #fff;
   opacity: 0;
   top: 0;
   pointer-events: none;
+  z-index: 99;
+  background: rgba(17, 17, 17, 0.95);
+  color: #fff;
   -webkit-transition: 300ms ease;
           transition: 300ms ease;
 }
@@ -5403,6 +5414,10 @@ table td:first-child {
   opacity: 1;
   pointer-events: auto;
 }
+#header--nav_cart.fs-swap-active .cart-items {
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+}
 #header--nav_cart .cart-header {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -5419,10 +5434,6 @@ table td:first-child {
 }
 #header--nav_cart .cart-footer .btn {
   margin-bottom: 0;
-}
-#header--nav_cart .cart-items {
-  overflow: scroll;
-  -webkit-overflow-scrolling: touch;
 }
 @media screen and (min-width: 300px) {
   #header--nav_cart .cart-items {

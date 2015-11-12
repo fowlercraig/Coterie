@@ -1,4 +1,4 @@
-<div class="wrapper">
+<div class="wrapper wrapper-nosides">
   <div class="cart-item cart-ajax_item">
     <div class="fs-row">
       <div class="fs-cell fs-all-half text-left">

@@ -119,6 +119,21 @@
          background: transparent;
          a {
             color: @white;
+            &.btn-hamburg {
+               &:before {
+                  content: "";
+                  position: absolute;
+                  left: 0;
+                  top: 50%;
+                  margin-top: -5px;
+                  width: 1em;
+                  height: 1px;
+                  background: @white50;
+                  box-shadow: 
+                    0 4px 0 0 @white50,
+                    0 8px 0 0 @white50;
+                }
+            }
          }
       }
    }
@@ -141,7 +156,9 @@
          position: relative;
       }
       &_cart {
-         //height: 400px;
+         opacity: 0;
+         top: 0;
+         pointer-events: none;
          @media @min {
             position: fixed;
             width: 100%;  
@@ -160,9 +177,6 @@
          z-index: 99;
          background: fade(@black, 95%);
          color: @white;
-         opacity: 0;
-         top: 0;
-         pointer-events: none;
          
          .transition();
          .divider {
@@ -176,6 +190,10 @@
                top: 0;
                opacity: 1;
                pointer-events: auto;
+               .cart-items {
+                  overflow: scroll;
+                  -webkit-overflow-scrolling: touch;
+               }
             }
          }
          .cart {
@@ -203,8 +221,6 @@
                @media @tablet {
                   max-height: 420px;   
                }
-               overflow: scroll;
-               -webkit-overflow-scrolling: touch;
                .divider {
                   &:last-child {
                      display: none;

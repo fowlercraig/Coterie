@@ -19,11 +19,11 @@
             <a href="#" class="btn btn-nav swap" data-swap-target=".about-swap">about</a>
             <a id="search-start" href="?page=search" class="btn btn-nav swap search-launch" data-swap-target=".search-swap" data-swap-linked=".search-launch">search</a>
             <a href="#" class="btn btn-nav swap right btn-last cart-launch" data-swap-target=".cart-swap" data-swap-linked=".cart-launch">cart (3)</a>
-            <?php include('parts/cart-header.php'); ?>
          </nav>
       </div>
    </header>
    <?php include('parts/header-about.php'); ?>
+   <?php include('parts/cart-header.php'); ?>
 </div>
 
 <?php include('parts/search-header.php'); ?>
