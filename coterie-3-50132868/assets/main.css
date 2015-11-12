@@ -4912,6 +4912,21 @@ table td:first-child {
   }
 }
 @media screen and (min-width: 300px) {
+  .banner.banner-small {
+    height: 250px;
+  }
+}
+@media screen and (min-width: 740px) {
+  .banner.banner-small {
+    height: 218.125px;
+  }
+}
+@media screen and (min-width: 980px) {
+  .banner.banner-small {
+    height: 340.625px;
+  }
+}
+@media screen and (min-width: 300px) {
   .banner-medium {
     height: 250px;
   }

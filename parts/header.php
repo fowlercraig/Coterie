@@ -14,6 +14,7 @@
             <a href="?page=collection&name=accessories" class="btn btn-nav">accessories</a>
             <a href="?page=collection&name=sale" class="btn btn-nav">sale</a>
             <a href="?page=collection&name=brands" class="btn btn-nav">brands</a>
+            <a href="?page=magazine&name=magazine" class="btn btn-nav">magazine</a>
          </nav>
          <nav id="header--nav_right" class="fs-cell fs-lg-half fs-md-2 fs-sm-2 text-right cart-swap">
             <a href="#" id="btnAbout" class="btn btn-nav swap" data-swap-target=".about-swap">about</a>

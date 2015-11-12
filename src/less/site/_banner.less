@@ -35,6 +35,22 @@
       height: 400px;
    }
 
+   &.banner-small {
+
+      @media @min {
+         height: 250px;
+      }
+
+      @media @tablet {
+         height: (455px*.5) - @spaced*.375;
+      }
+
+      @media @desktop {
+         height: (700px*.5) -  @spaced*.375;
+      }
+
+   }
+
    &-medium {
 
       @media @min {
