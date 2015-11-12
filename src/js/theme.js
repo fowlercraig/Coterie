@@ -76,4 +76,15 @@ $(document).ready(function(){
 	$(".swap").swap();
    searchClick();
    //splashLoaded();
+
+  $("#btnAbout").hover(
+    function() {
+      $("#header").stop(true, true).addClass("aboutHover fs-swap-active");
+    },
+    function() {
+      $("#header").stop(true, true).removeClass("aboutHover fs-swap-active");
+    }
+  );
+
+
 });
