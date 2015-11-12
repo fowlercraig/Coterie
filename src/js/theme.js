@@ -3,11 +3,19 @@
 // @codekit-append "_swipe.js"
 
 function splashLoaded(){
+  $('body,html').css({
+    height: '100%',
+    overflow: 'hidden',
+  });
   $(window).load(function(){
     setTimeout(function(){
       $('#splash').addClass('loaded');
       setTimeout(function(){
         $('#splash').remove();
+        $('body,html').css({
+          height: 'auto',
+          overflow: 'visible',
+        });
       },500);
     }, 5000);
   });
@@ -67,5 +75,5 @@ $(document).ready(function(){
 	});
 	$(".swap").swap();
    searchClick();
-   splashLoaded();
+   //splashLoaded();
 });

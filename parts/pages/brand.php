@@ -29,6 +29,20 @@
             <div class="fs-cell fs-lg-5 fs-md-6 fs-sm-3 fs-contained wrapper">
               <span>brands</span>
               <h2>common projects</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vehicula 
+                nibh ut nulla pretium hendrerit. Suspendisse et nibh sit amet magna 
+                volutpat porttitor ut at diam. Vestibulum vulputate, augue eget 
+                facilisis mattis, ante magna consequat velit, eget tempus eros lorem 
+                eu arcu. Nam malesuada ex nec nibh elementum mollis. 
+              </p>
+              <a target="_blank" href="#">commonprojects.com</a>
+              <hr class="invisible">
+              <div class="brand-clips">
+                <span class="color-grey">Featured Clips</span>
+                <div class="brand-clips--item"><a href="#">Lorem ipsum dolor sit amet, consectetur</a></div>
+                <div class="brand-clips--item"><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vehicula nibh ut nulla pretium hendrerit.</a></div>
+              </div>
             </div>
           </div>
         </div>

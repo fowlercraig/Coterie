@@ -68,6 +68,39 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/h55bbe231235d7.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 100471,
+		"inputAbbreviatedPath": "\/assets\/h55bbe231235d7.jpg",
+		"outputAbbreviatedPath": "\/assets\/h55bbe231235d7.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/h55e4f679a15f5.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 103182,
+		"inputAbbreviatedPath": "\/assets\/h55e4f679a15f5.jpg",
+		"outputAbbreviatedPath": "\/assets\/h55e4f679a15f5.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/h55f09e1f34da0.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 167118,
+		"inputAbbreviatedPath": "\/assets\/h55f09e1f34da0.jpg",
+		"outputAbbreviatedPath": "\/assets\/h55f09e1f34da0.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/handlebars.min.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -78,6 +111,17 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
+		},
+	"\/assets\/home_grid_4.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 118490,
+		"inputAbbreviatedPath": "\/assets\/home_grid_4.jpg",
+		"outputAbbreviatedPath": "\/assets\/home_grid_4.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
 		},
 	"\/assets\/icons.json": {
 		"fileType": 524288,
@@ -119,17 +163,6 @@
 		"initialSize": 184885,
 		"inputAbbreviatedPath": "\/assets\/IMG_1406.jpg",
 		"outputAbbreviatedPath": "\/assets\/IMG_1406.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/assets\/logo.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 27349,
-		"inputAbbreviatedPath": "\/assets\/logo.jpg",
-		"outputAbbreviatedPath": "\/assets\/logo.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

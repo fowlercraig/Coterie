@@ -134,6 +134,28 @@
       opacity: .65;
    }
 
+   &--content {
+      position: relative;
+      z-index: 9;
+      padding: @fs-grid-gutter*5;
+   }
+
+   &_overlay {
+      &:before {
+         content: '';
+         display: block;
+         .cover();
+         background: transparent;
+         z-index: 8;
+         transition: 200ms ease;
+      }
+      &:hover {
+         &:before {
+            background: fade(@black, 10%);
+         }
+      }
+   }
+
    .btn {
       margin-top: 10px;
       opacity: 1;

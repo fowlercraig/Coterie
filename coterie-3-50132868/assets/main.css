@@ -5014,6 +5014,27 @@ table td:first-child {
   background-position: center center;
   opacity: .65;
 }
+.banner--content {
+  position: relative;
+  z-index: 9;
+  padding: 5%;
+}
+.banner_overlay:before {
+  content: '';
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: transparent;
+  z-index: 8;
+  -webkit-transition: 200ms ease;
+          transition: 200ms ease;
+}
+.banner_overlay:hover:before {
+  background: rgba(17, 17, 17, 0.1);
+}
 .banner .btn {
   margin-top: 10px;
   opacity: 1;
@@ -5691,8 +5712,9 @@ table td:first-child {
 .page-modal--content {
   position: relative;
   box-shadow: 0 0 75px rgba(0, 0, 0, 0.25);
-  color: #fff;
+  color: #999;
 }
+.page-modal--content a,
 .page-modal--content h1,
 .page-modal--content h2,
 .page-modal--content h3,
@@ -5701,6 +5723,23 @@ table td:first-child {
 .page-modal--content h6 {
   color: #fff;
   font-weight: normal;
+}
+.page-modal--content a {
+  text-decoration: underline;
+}
+.page-modal--content .brand-clips span {
+  display: block;
+  margin-bottom: 10px;
+}
+.page-modal--content .brand-clips--item {
+  border-top: 1px solid #333;
+  padding: 10px 0;
+}
+.page-modal--content .brand-clips--item a {
+  text-decoration: none;
+}
+.page-modal--content .brand-clips--item a:hover {
+  text-decoration: underline;
 }
 .page-modal--close {
   position: absolute;
