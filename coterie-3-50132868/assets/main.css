@@ -4021,6 +4021,11 @@ img.rounded {
 .wrapper-nosides {
   padding: 16.66666667px 0;
 }
+.wrapper_pinned {
+  padding: 25px;
+  position: absolute!important;
+  z-index: 2;
+}
 .clearfix:after {
   content: '';
   display: block;
@@ -5375,7 +5380,7 @@ table td:first-child {
 }
 #header--nav_cart {
   opacity: 0;
-  top: 0;
+  top: -5px;
   pointer-events: none;
   z-index: 99;
   background: rgba(17, 17, 17, 0.95);
@@ -5531,6 +5536,9 @@ table td:first-child {
   .page-header {
     height: 250px;
   }
+}
+.page-header_compact {
+  height: auto;
 }
 .page-header.chin-sm {
   padding-bottom: 50px;

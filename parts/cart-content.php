@@ -10,8 +10,8 @@
       </div>
       <div class="fs-cell fs-all-half text-left">
         <a rv-href="item.url" href="/products/super-rad-shirt?variant=10007224196">
-          <span class="color-grey" rv-text="item.vendor">Need Supply</span><br>
-          <span class="color-white" rv-text="item.title">Super rad shirt</span><br>
+          <span class="color-grey" rv-text="item.vendor">Common Projects</span><br>
+          <p class="emphasized"><span class="color-white" rv-text="item.title">Super Rad Shirt</span></p>
           <span class="color-grey" rv-text="item.quantity">6</span> | 
           <span class="color-white" rv-html="item.price | money Currency.currentCurrency">3000</span>
         </a>

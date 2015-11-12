@@ -4,7 +4,7 @@
     <div class="fs-cell fs-all-full">
       <div class="page-title_wrapper">
         <h1 class="page-title">
-          <?php if ($page = 'index'): ?>
+          <?php if ($page == 'index'): ?>
           <?php echo $siteName; ?>.
           <?php else: ?>
         	<?php echo $_GET['name']; ?>.

@@ -9,7 +9,7 @@
 					los angeles, ca, 91107<br/>
 					323 444 1212<br/>
 					<a href="mailto:hello@co-te-rie.com">hello@co-te-rie.com</a><br/>
-					<a href="?page=about">more info</a>
+					<a href="?page=about&name=about us">more info</a>
 				</p>
 			</div>
 		</div>
