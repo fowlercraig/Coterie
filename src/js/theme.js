@@ -75,7 +75,11 @@ $(document).ready(function(){
 	});
 	$(".swap").swap();
    searchClick();
-   splashLoaded();
+
+   if ($('body').hasClass('page-index')) {
+      console.log('index!');
+     splashLoaded();
+    }
 
   $("#btnAbout").hover(
     function() {
