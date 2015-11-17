@@ -5,7 +5,7 @@
             <a href="#" id="header-menu" class="btn btn-nav btn-hamburg">&nbsp;</a>
             <a href="/" class="btn btn-nav btn-first btn-logo"><?php echo $siteName; ?></a>
          </nav>
-         <nav id="header--nav_left" class="fs-cell fs-lg-half fs-md-4 fs-sm-hide navigation">
+         <nav id="header--nav_left" class="fs-cell fs-lg-8 fs-md-4 fs-sm-hide navigation">
             <?php if( $page != 'index'): ?>
             <a href="/" class="btn btn-nav btn-first active"><?php echo $siteName; ?></a>
             <?php endif; ?>
@@ -16,7 +16,7 @@
             <a href="?page=collection&name=brands" class="btn btn-nav">brands</a>
             <a href="?page=magazine&name=magazine" class="btn btn-nav">magazine</a>
          </nav>
-         <nav id="header--nav_right" class="fs-cell fs-lg-half fs-md-2 fs-sm-2 text-right cart-swap">
+         <nav id="header--nav_right" class="fs-cell fs-lg-4 fs-md-2 fs-sm-2 text-right cart-swap">
             <a href="#" id="btnAbout" class="btn btn-nav swap" data-swap-target=".about-swap">about</a>
             <a id="search-start" href="?page=search" class="btn btn-nav swap search-launch" data-swap-target=".search-swap" data-swap-linked=".search-launch">search</a>
             <a href="#" class="btn btn-nav swap right btn-last cart-launch" data-swap-target=".cart-swap" data-swap-linked=".cart-launch">cart (3)</a>
