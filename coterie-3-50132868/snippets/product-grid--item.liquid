@@ -1,0 +1,60 @@
+<?php 
+  $items = Array(
+    '1001065_002.jpg',
+    'h55bbe231235d7.jpg',
+    'h55e4f679a15f5.jpg',
+  );
+?>
+
+<div class="product--grid-item">
+  <div class="product--grid-thumb">
+    <a href="{{ product.url | within: collection }}">
+      <img src="{{ product.featured_image.src | img_url: 'large' }}" class="img-responsive" alt="{{ product.featured_image.alt | escape }}">
+    </a>
+    <div class="product--grid-thumb_controls">
+      <span>Available Sizes</span>
+      {% for variant in product.variants %}
+      {% if variant.available %}
+      <span>{{ variant.title }} • </span>
+      {% else %}
+      <span class="disabled">{{ variant.title }}</span>
+      {% endif %}
+      {% endfor %}
+      <span class="fl-right">
+        <a href="#" class="ss-gizmo ss-eye">zoom</a>
+      </span>
+    </div>
+  </div>
+  <div class="product--grid-info">
+    <a href="{{ product.url | within: collection }}">
+      <small class="color-grey"><span class="product--grid-vendor">{{ product.vendor }}</span></small><br>
+      <span class="product--grid-title color-black">{{ product.title }}</span><br>
+      <small class="color-grey">
+        {% if on_sale %}
+        {% if product.price_varies %}
+        {% assign sale_price = product.price | money %}
+        {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+        {% else %}
+        <strong>{{ 'products.product.on_sale' | t }}</strong>
+        {{ product.price | money }}
+        {% endif %}
+        {% else %}
+        {% if product.price_varies %}
+        {% assign price = product.price | money %}
+        {{ 'products.general.from_text_html' | t: price: price }}
+        {% else %}
+        {{ product.price | money }}
+        {% endif %}
+        {% endif %}
+        {% if sold_out %}
+        <br><strong>{{ 'products.product.sold_out' | t }}</strong>
+        {% endif %}
+        {% if on_sale %}
+        <span class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
+        <br><s>{{ product.compare_at_price | money }}</s>
+        {% endif %}
+      </small>
+    </a>
+  </div>
+  <hr class="invisible">
+</div>

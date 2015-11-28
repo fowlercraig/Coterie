@@ -1,1 +1,10 @@
 {% include 'page-header' %}
+{% include 'page-filters' %}
+
+{% assign width = 'fs-cell fs-xl-fourth fs-lg-third fs-md-2 fs-sm-half fs-xs-half' %}
+
+<div class="product-grid fs-row">
+  {% for product in collection.products %}
+  <div class="product-grid_item {{ width }}">{% include 'product-grid--item' %}</div>
+  {% endfor %}
+</div>

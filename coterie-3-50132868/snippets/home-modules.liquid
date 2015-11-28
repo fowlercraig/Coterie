@@ -1,0 +1,26 @@
+{% for i in (1..6) %}
+{% capture slide %}hero_slide_{{ i }}_enable{% endcapture %}
+{% capture slide_img %}hero_slide_{{ i }}.jpg{% endcapture %}
+{% capture slide_text_color %}hero_slide_{{ i }}_text_color{% endcapture %}
+{% capture slide_heading %}hero_slide_{{ i }}_heading{% endcapture %}
+{% capture slide_subheading %}hero_slide_{{ i }}_subheading{% endcapture %}
+{% capture slide_cta %}hero_slide_{{ i }}_cta{% endcapture %}
+{% capture slide_link %}hero_slide_{{ i }}_link{% endcapture %}
+{% capture slide_width %}hero_slide_{{ i }}_width{% endcapture %}
+{% capture slide_align_h %}hero_slide_{{ i }}_text_align_h{% endcapture %}
+{% capture alt_url %}hero_slide_{{ i }}_imgurl{% endcapture %}
+{% if settings[slide] %}
+
+<div class="home-module fs-cell {{ settings[slide_width] }}">
+  <div class="wallpaper banner banner-medium banner_overlay" data-background-options='{"source":"{{ slide_img | asset_url }}"}'>
+    <div class="wrapper banner--content">
+      <p>
+        {{ settings[slide_subheading] }}<br>
+        <a href="{{ settings[slide_link] }}">{{ settings[slide_heading] }}</a><br>
+      </p>
+    </div>
+  </div>
+</div>
+
+{% endif %}
+{% endfor %}

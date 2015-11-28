@@ -1,15 +1,9 @@
+{% include 'page-header' %}
+
 <div id="index">
-  <div class="wallpaper banner banner-large fs-cell fs-full-all" data-background-options='{"source":{"0px":"{{ 'IMG_1406-mobile.jpg' | asset_url }}","740px":"{{ 'IMG_1406.jpg' | asset_url }}"}}'>
-    <div class="centered centered-top fs-all-full fs-contained">
-      <div class="fs-row">
-        <div class="fs-cell fs-all-full text-left">
-          <p>
-            new arrivals:<br>
-            <a href="?page=brand">common projects.</a>
-          </p>
-        </div>
-      </div>
-    </div>
+  {% include 'home-slider' %}
+  <div class="fs-row fs-row-full">
+  {% include 'home-modules' %}
   </div>
-  <hr class="invisible compact">
 </div>
+<hr class="compact invisible">

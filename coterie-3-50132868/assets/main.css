@@ -1164,7 +1164,7 @@
 .fs-navigation *:before {
   box-sizing: border-box;
   -webkit-transition: none;
-          transition: none;
+  transition: none;
   -webkit-user-select: none !important;
      -moz-user-select: none !important;
       -ms-user-select: none !important;
@@ -1217,12 +1217,14 @@
 }
 .fs-navigation-reveal-nav.fs-navigation-animated {
   -webkit-transition: visibility 0.001s linear 0.2s;
-          transition: visibility 0.001s linear 0.2s;
+  transition: visibility 0.001s linear 0.2s;
 }
 .fs-navigation-push-nav.fs-navigation-animated,
 .fs-navigation-overlay-nav.fs-navigation-animated {
-  -webkit-transition: -webkit-transform 0.2s ease, visibility 0.001s linear 0.2s;
-          transition: transform 0.2s ease, visibility 0.001s linear 0.2s;
+  -webkit-transition: visibility 0.001s linear 0.2s, -webkit-transform 0.2s ease;
+  transition: visibility 0.001s linear 0.2s, -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease, visibility 0.001s linear 0.2s;
+  transition: transform 0.2s ease, visibility 0.001s linear 0.2s, -webkit-transform 0.2s ease;
 }
 .fs-navigation-push-nav.fs-navigation-enabled,
 .fs-navigation-reveal-nav.fs-navigation-enabled {
@@ -1262,15 +1264,17 @@
 .fs-navigation-reveal-nav.fs-navigation-open {
   visibility: visible;
   -webkit-transition: visibility 0.001s ease;
-          transition: visibility 0.001s ease;
+  transition: visibility 0.001s ease;
 }
 .fs-navigation-push-nav.fs-navigation-open,
 .fs-navigation-overlay-nav.fs-navigation-open {
   -webkit-transform: translate3D(0, 0, 0);
       -ms-transform: translate3D(0, 0, 0);
           transform: translate3D(0, 0, 0);
-  -webkit-transition: -webkit-transform 0.2s ease, visibility 0.001s ease;
-          transition: transform 0.2s ease, visibility 0.001s ease;
+  -webkit-transition: visibility 0.001s ease, -webkit-transform 0.2s ease;
+  transition: visibility 0.001s ease, -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease, visibility 0.001s ease;
+  transition: transform 0.2s ease, visibility 0.001s ease, -webkit-transform 0.2s ease;
   visibility: visible;
 }
 .fs-navigation-push-handle.fs-navigation-enabled,
@@ -1305,7 +1309,7 @@
   display: block;
   opacity: 0;
   -webkit-transition: opacity 0.2s ease, visibility 0.2s ease;
-          transition: opacity 0.2s ease, visibility 0.2s ease;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
   visibility: hidden;
 }
 .fs-navigation-overlay-content.fs-navigation-open:before {
@@ -1325,7 +1329,9 @@
 .fs-navigation-reveal-content.fs-navigation-animated,
 .fs-navigation-push-content.fs-navigation-animated {
   -webkit-transition: -webkit-transform 0.2s ease;
-          transition: transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
 }
 .fs-navigation-reveal-left-content.fs-navigation-enabled,
 .fs-navigation-push-left-content.fs-navigation-enabled {
@@ -1486,7 +1492,7 @@
 .fs-dropdown *:before {
   box-sizing: border-box;
   -webkit-transition: none;
-          transition: none;
+  transition: none;
   -webkit-user-select: none !important;
      -moz-user-select: none !important;
       -ms-user-select: none !important;
@@ -1856,7 +1862,7 @@
 .fs-carousel *:before {
   box-sizing: border-box;
   -webkit-transition: none;
-          transition: none;
+  transition: none;
   -webkit-user-select: none !important;
      -moz-user-select: none !important;
       -ms-user-select: none !important;
@@ -1896,7 +1902,9 @@
   margin: 0;
   overflow: hidden;
   -webkit-transition: -webkit-transform 0.5s ease;
-          transition: transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
 }
@@ -1939,7 +1947,7 @@
   overflow: hidden;
   text-indent: 200%;
   -webkit-transition: opacity 0.15s ease, visibility 0.15s ease;
-          transition: opacity 0.15s ease, visibility 0.15s ease;
+  transition: opacity 0.15s ease, visibility 0.15s ease;
   white-space: nowrap;
 }
 .fs-carousel-enabled .fs-carousel-control:before {
@@ -2080,7 +2088,7 @@
 .fs-background-container,
 .fs-background-media {
   -webkit-transition: none;
-          transition: none;
+  transition: none;
 }
 .fs-background-container {
   width: 100%;
@@ -2098,7 +2106,7 @@
 }
 .fs-background-media.fs-background-animated {
   -webkit-transition: opacity 0.5s linear;
-          transition: opacity 0.5s linear;
+  transition: opacity 0.5s linear;
 }
 .fs-background-media img,
 .fs-background-media video,
@@ -2224,7 +2232,7 @@
 .fs-checkbox *:before {
   box-sizing: border-box;
   -webkit-transition: none;
-          transition: none;
+  transition: none;
   -webkit-user-select: none !important;
      -moz-user-select: none !important;
       -ms-user-select: none !important;
@@ -2247,7 +2255,7 @@
   z-index: -1;
   pointer-events: none;
   -webkit-transition: none;
-          transition: none;
+  transition: none;
 }
 .fs-checkbox-label {
   color: #666;
@@ -2287,7 +2295,9 @@
   display: block;
   margin: 3px 0 0 6px;
   -webkit-transition: -webkit-transform 0.15s ease;
-          transition: transform 0.15s ease;
+  transition: -webkit-transform 0.15s ease;
+  transition: transform 0.15s ease;
+  transition: transform 0.15s ease, -webkit-transform 0.15s ease;
   -webkit-transform: rotate(45deg) scale(0);
       -ms-transform: rotate(45deg) scale(0);
           transform: rotate(45deg) scale(0);
@@ -2319,7 +2329,9 @@
       -ms-transform: scale(0);
           transform: scale(0);
   -webkit-transition: -webkit-transform 0.15s ease;
-          transition: transform 0.15s ease;
+  transition: -webkit-transform 0.15s ease;
+  transition: transform 0.15s ease;
+  transition: transform 0.15s ease, -webkit-transform 0.15s ease;
 }
 .fs-checkbox-radio .fs-checkbox-flag:before {
   display: none;
@@ -2386,7 +2398,7 @@
   display: block;
   margin: 0;
   -webkit-transition: left 0.15s ease;
-          transition: left 0.15s ease;
+  transition: left 0.15s ease;
 }
 .fs-checkbox-toggle .fs-checkbox-flag:before {
   display: none;
@@ -3315,7 +3327,9 @@ img.mfp-img {
   transform-origin: left top;
   /* for open/close transition */
   -webkit-transition: -webkit-transform 333ms cubic-bezier(0.4, 0, 0.22, 1);
+  transition: -webkit-transform 333ms cubic-bezier(0.4, 0, 0.22, 1);
   transition: transform 333ms cubic-bezier(0.4, 0, 0.22, 1);
+  transition: transform 333ms cubic-bezier(0.4, 0, 0.22, 1), -webkit-transform 333ms cubic-bezier(0.4, 0, 0.22, 1);
 }
 .pswp__bg {
   will-change: opacity;
@@ -3571,7 +3585,9 @@ img.mfp-img {
   -ms-transform: translateY(6px);
   transform: translateY(6px);
   -webkit-transition: -webkit-transform 0.25s;
+  transition: -webkit-transform 0.25s;
   transition: transform 0.25s;
+  transition: transform 0.25s, -webkit-transform 0.25s;
   -webkit-backface-visibility: hidden;
   will-change: transform;
 }
@@ -4071,7 +4087,7 @@ img.rounded {
 *:active,
 *:focus {
   -webkit-transition: background-color 0.1s linear, border-color 0.1s linear, color 0.1s linear, opacity 0.1s linear;
-          transition: background-color 0.1s linear, border-color 0.1s linear, color 0.1s linear, opacity 0.1s linear;
+  transition: background-color 0.1s linear, border-color 0.1s linear, color 0.1s linear, opacity 0.1s linear;
 }
 *:focus,
 *:hover,
@@ -4340,7 +4356,7 @@ form input[type=search] {
   padding: 0 8px;
   line-height: 45px;
   -webkit-transition: 300ms ease;
-          transition: 300ms ease;
+  transition: 300ms ease;
 }
 form input[type=submit]:before,
 form input[type=search]:before {
@@ -4693,7 +4709,7 @@ table td:first-child {
   padding: 0 8px;
   line-height: 45px;
   -webkit-transition: 300ms ease;
-          transition: 300ms ease;
+  transition: 300ms ease;
 }
 .btn:before {
   position: relative;
@@ -5065,7 +5081,7 @@ table td:first-child {
   background: transparent;
   z-index: 8;
   -webkit-transition: 200ms ease;
-          transition: 200ms ease;
+  transition: 200ms ease;
 }
 .banner_overlay:hover:before {
   background: rgba(17, 17, 17, 0.1);
@@ -5175,7 +5191,7 @@ table td:first-child {
 }
 #wrapper.dismissedalert {
   -webkit-transition: 300ms ease;
-          transition: 300ms ease;
+  transition: 300ms ease;
   -webkit-transform: translate(0, -75px);
       -ms-transform: translate(0, -75px);
           transform: translate(0, -75px);
@@ -5225,10 +5241,14 @@ table td:first-child {
   margin: 0 -1%;
   width: auto;
 }
+body {
+  background: #F2F2F2;
+}
 #wrapper,
 .content {
   max-width: 1600px;
   margin: auto;
+  background: #fff;
 }
 #wrapper.fixed-header,
 .content.fixed-header {
@@ -5258,7 +5278,7 @@ table td:first-child {
 }
 #header {
   -webkit-transition: 300ms ease;
-          transition: 300ms ease;
+  transition: 300ms ease;
   position: relative;
   z-index: 99;
 }
@@ -5287,7 +5307,7 @@ table td:first-child {
   top: 0;
   width: 100%;
   -webkit-transition: 300ms ease;
-          transition: 300ms ease;
+  transition: 300ms ease;
   position: fixed;
   z-index: 999;
   background: rgba(255, 255, 255, 0.95);
@@ -5357,7 +5377,7 @@ table td:first-child {
   top: 0;
   z-index: 999;
   -webkit-transition: background-color 300ms ease;
-          transition: background-color 300ms ease;
+  transition: background-color 300ms ease;
 }
 #header.fixed:hover {
   background-color: #fff;
@@ -5397,7 +5417,7 @@ table td:first-child {
   z-index: 99;
   overflow: hidden;
   -webkit-transition: 300ms ease;
-          transition: 300ms ease;
+  transition: 300ms ease;
 }
 #header--active.fs-swap-active {
   height: 400px;
@@ -5413,7 +5433,7 @@ table td:first-child {
   background: rgba(17, 17, 17, 0.95);
   color: #fff;
   -webkit-transition: 300ms ease;
-          transition: 300ms ease;
+  transition: 300ms ease;
 }
 @media screen and (min-width: 300px) {
   #header--nav_cart {
@@ -5609,7 +5629,7 @@ table td:first-child {
   line-height: 1;
   color: #111;
   -webkit-transition: 300ms ease;
-          transition: 300ms ease;
+  transition: 300ms ease;
 }
 @media screen and (min-width: 300px) {
   .page-title {
@@ -5649,7 +5669,7 @@ table td:first-child {
 .page-title_search {
   display: block;
   -webkit-transition: 300ms ease;
-          transition: 300ms ease;
+  transition: 300ms ease;
   border-bottom: 1px solid rgba(17, 17, 17, 0.25);
   width: 100%;
   font-weight: 500;
@@ -5744,7 +5764,7 @@ table td:first-child {
   width: 100%;
   background: rgba(255, 255, 255, 0.9);
   -webkit-transition: 300ms ease;
-          transition: 300ms ease;
+  transition: 300ms ease;
   display: none;
 }
 .page-modal.fs-swap-enabled {
@@ -5845,7 +5865,7 @@ table td:first-child {
 }
 #splash.loaded {
   -webkit-transition: 500ms ease;
-          transition: 500ms ease;
+  transition: 500ms ease;
   -webkit-transform: translateY(100%);
       -ms-transform: translateY(100%);
           transform: translateY(100%);
@@ -5874,7 +5894,7 @@ table td:first-child {
   opacity: 0;
   pointer-events: none;
   -webkit-transition: 200ms ease;
-          transition: 200ms ease;
+  transition: 200ms ease;
   color: #fff;
   position: absolute;
   width: 100%;
@@ -5937,7 +5957,9 @@ table td:first-child {
 }
 .product--grid-thumb img {
   -webkit-transition: -webkit-transform 200ms ease;
-          transition: transform 200ms ease;
+  transition: -webkit-transform 200ms ease;
+  transition: transform 200ms ease;
+  transition: transform 200ms ease, -webkit-transform 200ms ease;
 }
 .product--grid-thumb:hover img {
   -webkit-transform: translateY(-50px);
@@ -5984,7 +6006,9 @@ table td:first-child {
   width: 100%;
   background: #111;
   -webkit-transition: -webkit-transform 200ms ease;
-          transition: transform 200ms ease;
+  transition: -webkit-transform 200ms ease;
+  transition: transform 200ms ease;
+  transition: transform 200ms ease, -webkit-transform 200ms ease;
   -webkit-transform: translateY(50px);
       -ms-transform: translateY(50px);
           transform: translateY(50px);
@@ -6079,7 +6103,7 @@ table td:first-child {
   border-radius: 50%;
   margin: 12.5px;
   -webkit-transition: 300ms ease;
-          transition: 300ms ease;
+  transition: 300ms ease;
 }
 @media screen and (min-width: 740px) {
   #product--images .slide a:hover:before {
@@ -6094,7 +6118,7 @@ table td:first-child {
   top: 0;
   width: 100%;
   -webkit-transition: 300ms ease;
-          transition: 300ms ease;
+  transition: 300ms ease;
   position: fixed;
   background: rgba(255, 255, 255, 0.9);
   z-index: 99;
@@ -6155,7 +6179,7 @@ table td:first-child {
   max-height: 0px;
   overflow: hidden;
   -webkit-transition: 300ms ease;
-          transition: 300ms ease;
+  transition: 300ms ease;
 }
 #cart-instructions.fs-swap-active {
   max-height: 500px;

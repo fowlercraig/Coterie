@@ -33,7 +33,11 @@
 {% endif %}
 
 
-<body class="fs-grid page-{{ page_title | handle }}">
+<body class="fs-grid fs-grid-fluid page-{{ page_title | handle }}">
+
+{% if template == 'yolo' %}
+{% include 'page-splash' %}
+{% endif %}
 
 <div id="wrapper" class="menu-swap">
 {% include 'header' %}

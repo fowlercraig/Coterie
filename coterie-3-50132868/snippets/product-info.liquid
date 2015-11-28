@@ -1,0 +1,36 @@
+<hr class="divider nomargin">
+<div id="product--info">
+   <header>
+      <br>
+      <a href="?page=brand&name=Common Projects" class="color-gray">Common Projects</a>
+      <hr class="invisible compact">
+      <h1 id="product--title">
+         {{ product.title }}
+         <small id="product--price" class="fl-right">
+          {% if on_sale %}
+          {% if product.price_varies %}
+          {% assign sale_price = product.price | money %}
+          {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+          {% else %}
+          <strong>{{ 'products.product.on_sale' | t }}</strong>
+          {{ product.price | money }}
+          {% endif %}
+          {% else %}
+          {% if product.price_varies %}
+          {% assign price = product.price | money %}
+          {{ 'products.general.from_text_html' | t: price: price }}
+          {% else %}
+          {{ product.price | money }}
+          {% endif %}
+          {% endif %}
+          {% if sold_out %}
+          <br><strong>{{ 'products.product.sold_out' | t }}</strong>
+          {% endif %}
+          {% if on_sale %}
+          <span class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
+          <br><s>{{ product.compare_at_price | money }}</s>
+          {% endif %}
+         </small>
+      </h1>
+   </header>
+</div>
