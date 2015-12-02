@@ -8,11 +8,19 @@
 	&--options {
 		
 		margin-bottom: @spaced;
+
+		select {
+			width: 100%;
+		}
+
+		label {
+			.font_size(12);
+		}
 		
-		.select-nostyle {
+		.select-nostyle, select {
 			border-color: @lighterGray;
 			display: block;
-			width: 100%;
+			min-width: 100%;
 			height: 45px;
 			padding: 0 15px;
 			border-radius: 0;

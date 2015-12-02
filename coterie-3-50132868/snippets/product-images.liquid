@@ -1,13 +1,10 @@
 <div id="product--images" class="image-gallery carousel" data-carousel-options='{"maxWidth":"980px", "pagination":false}'>
+  {% for image in product.images %}
   <figure itemprop="associatedMedia" class="slide">
-    <a itemprop="contentUrl" data-size="800x1200" href="http://i.imgur.com/BMcdZzX.jpg">
-      <img src="http://i.imgur.com/BMcdZzX.jpg" itemprop="thumbnail" class="img-responsive" alt="" />
+    <a itemprop="contentUrl" data-size="880x1130" href="{{ image | img_url: 'original' }}">
+      <img src="{{ image | img_url: '1024x1024' }}" itemprop="thumbnail" class="img-responsive" alt="" />
     </a>
   </figure>
-  <figure itemprop="associatedMedia" class="slide">
-    <a itemprop="contentUrl" data-size="800x1200" href="http://i.imgur.com/mEYBMZK.jpg">
-      <img src="http://i.imgur.com/mEYBMZK.jpg" itemprop="thumbnail" class="img-responsive" alt="" />
-    </a>
-  </figure>
+  {% endfor %}
 </div>
 

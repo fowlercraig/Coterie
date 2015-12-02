@@ -4338,7 +4338,7 @@ select {
   font-size: 14px;
   font-size: 0.875rem;
   margin-bottom: 15px;
-  background: #fff url('/assets/icon_down.svg') center right 10px no-repeat;
+  background: #fff url('icon_down.svg') center right 10px no-repeat;
   background-size: 12px auto;
 }
 form input[type=submit],
@@ -6043,10 +6043,18 @@ body {
 #product--options {
   margin-bottom: 25px;
 }
-#product--options .select-nostyle {
+#product--options select {
+  width: 100%;
+}
+#product--options label {
+  font-size: 12px;
+  font-size: 0.75rem;
+}
+#product--options .select-nostyle,
+#product--options select {
   border-color: #E6E5E6;
   display: block;
-  width: 100%;
+  min-width: 100%;
   height: 45px;
   padding: 0 15px;
   border-radius: 0;
