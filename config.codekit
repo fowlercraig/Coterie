@@ -1560,7 +1560,7 @@
 		},
 	"\/src\/bower_components\/Formstone\/dist\/js\/number.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/src\/bower_components\/Formstone\/dist\/js\/number.js",
 		"outputAbbreviatedPath": "\/src\/bower_components\/Formstone\/dist\/js\/min\/number-min.js",
@@ -2218,7 +2218,7 @@
 		"disableJavascript": 0,
 		"fileType": 1,
 		"ieCompatibility": 1,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/src\/bower_components\/Formstone\/src\/less\/number.less",
 		"outputAbbreviatedPath": "\/src\/bower_components\/Formstone\/src\/css\/number.css",

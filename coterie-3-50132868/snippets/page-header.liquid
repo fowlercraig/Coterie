@@ -7,7 +7,8 @@
           {% if template == 'index' %}{{ shop.name }}{% endif %}
           {% if template == 'collection' %}{{ collection.title }}.{% endif %}
           {% if template == 'cart' %}
-          <span class="page-title_sub"><small>subtotal: <small>$1125</small></small></span>
+          your cart.
+          <span class="page-title_sub"><small>subtotal: <small>{{ cart.total_price | money }}</small></small></span>
           {% endif %}
 
           {% comment %}

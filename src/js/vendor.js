@@ -8,7 +8,7 @@
 // @codekit-prepend "../bower_components/Formstone/dist/js/carousel.js"
 // @codekit-prepend "../bower_components/Formstone/dist/js/background.js"
 // @codekit-prepend "../bower_components/Formstone/dist/js/checkbox.js"
-
+// @codekit-prepend "../bower_components/Formstone/dist/js/number.js"
 
 // @codekit-prepend "../bower_components/components-modernizr/modernizr.js"
 // @codekit-prepend "../bower_components/headhesive.js/dist/headhesive.js"

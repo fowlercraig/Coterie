@@ -14,8 +14,10 @@
     <div class="product--grid-thumb_controls">
       <span>Available Sizes</span>
       {% for variant in product.variants %}
-      {% if variant.available %}
+      {% if product.available and product.variants.size > 1 %}
+      
       <span>{{ variant.title }} • </span>
+      
       {% else %}
       <span class="disabled">{{ variant.title }}</span>
       {% endif %}

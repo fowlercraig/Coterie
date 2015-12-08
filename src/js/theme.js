@@ -61,8 +61,10 @@ function searchClick(){
 
 }
 
+
 $(document).ready(function(){
 
+  $("input[type=number]").number();
 	$(".wallpaper").background();
 	$(".carousel").carousel();
 

@@ -1,0 +1,39 @@
+<div class="product--grid-item product--grid-item_cart fs-row">
+
+  <div class="product--grid-thumb product--grid-thumb_nohover fs-cell fs-lg-full fs-md-full fs-sm-full fs-xs-half">
+    <a class="product--grid-thumb_delete" href="/cart/change?line={{ forloop.index }}&quantity=0"><span class="ss-gizmo ss-delete"></span></a>
+    <a href="{{ product.url | within: collection }}">
+      <img src="{{ item | img_url: 'large' }}" class="img-responsive" alt="{{ product.featured_image.alt | escape }}">
+    </a>
+  </div>
+
+  <div class="product--grid-info  fs-cell fs-lg-full fs-md-full fs-sm-full fs-xs-half">
+    <div class="fs-row">
+
+      <hr  class="fs-cell fs-lg-hide fs-md-hide fs-sm-3 invisible compact">
+
+      <div class="fs-cell fs-all-half fs-md-half fs-sm-3"><a href="{{ item.url }}">{{ item.product.title }}</a></div>
+      <hr  class="fs-cell fs-lg-hide fs-md-hide fs-sm-3 divider compact_extra" />
+      <div class="fs-cell fs-all-half fs-sm-3 product--grid-info_right">{{ item.price | money }}</div>
+      <hr  class="fs-cell divider compact_extra" />
+
+      <div class="fs-cell fs-all-half fs-sm-hide"><small>detail</small></div>
+      <div class="fs-cell fs-all-half fs-sm-3 product--grid-info_right"><small>{{ item.variant.title }}</small></div>
+      <hr  class="fs-cell divider compact_extra" />
+
+      <div class="fs-cell fs-all-half fs-sm-hide"><small>quantity</small></div>
+      <div class="fs-cell fs-all-half fs-sm-3 product--grid-info_right">
+        <!--<small><span class="btn-icon ss-gizmo ss-plus"></span>{{ item.quantity }}<span class="btn-icon ss-gizmo ss-hyphen right"></span></small>-->
+        <input type="number" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" min="0">
+      </div>
+      <hr  class="fs-cell divider compact_extra" />
+
+      <div class="fs-cell fs-all-half fs-sm-hide"><small>total</small></div>
+      <div class="fs-cell fs-all-half fs-sm-3 product--grid-info_right"><small>{{ item.line_price | money }}</small></div>
+      <hr  class="fs-cell divider compact_extra" />
+
+    </div>
+  </div>
+  <hr class="divider compact fs-cell fs-lg-hide fs-md-hide fs-sm-hide fs-xs-3">
+</div>
+

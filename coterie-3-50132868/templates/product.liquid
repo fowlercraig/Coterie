@@ -39,6 +39,16 @@
     {% if product.variants.size == 1 and product.variants.first.title contains 'Default' %}
       $('.selector-wrapper').hide();
     {% endif %}
+    // Disabling out of stock product
+    {% if product.options.size == 1 %}
+    {% for variant in product.variants %}
+    {% unless variant.available %}
+    alert('outofstock');
+    jQuery('.single-option-selector option:eq({{ forloop.index0 }})').attr('disabled', 'disabled');
+    {% endunless %}
+    {% endfor %}
+    jQuery('.single-option-selector').trigger('change');
+    {% endif %}
   });
   setTimeout(function(){
     $('.selector-wrapper').addClass('fs-cell fs-all-third');  

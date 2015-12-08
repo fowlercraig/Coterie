@@ -31,7 +31,9 @@
       }
       &:hover {
          img {
-            transform: translateY(-@spaced*2);
+            @media @desktop {
+               transform: translateY(-@spaced*2);
+            }
          }
          .product--grid-thumb_controls {
             transform: translateY(0);
