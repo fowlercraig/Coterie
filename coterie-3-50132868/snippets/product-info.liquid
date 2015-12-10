@@ -2,7 +2,14 @@
 <div id="product--info">
    <header>
       <br>
-      <a href="?page=brand&name=Common Projects" class="color-gray">Common Projects</a>
+      {% capture brand %}{{ product.vendor |  handleize }}{% endcapture %}
+
+      {% if collections[brand].products.size != 0 %}
+      <a href="/collections/{{ brand }}" class="color-gray">{{ product.vendor }}</a>
+      {% else %}
+      <a href="/collections/vendors?q={{ product.vendor }}" class="color-gray">{{ product.vendor }}</a>
+      {% endif %}
+      
       <hr class="invisible compact">
       <h1 id="product--title">
          {{ product.title }}

@@ -1,0 +1,10 @@
+
+<div class="fs-row">
+<div class="fs-cell fs-all-full">
+<ul>
+{% for product_vendor in shop.vendors %}
+<li>{{ product_vendor | link_to_vendor }}</li>
+{% endfor %}
+</ul>
+</div>
+</div>

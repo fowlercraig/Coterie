@@ -25,27 +25,11 @@
                </select>
             </div>
 
+            <div id="cart_notification" class="fs-cell fs-all-full"></div>
+
          </div>
       </div>
       <hr class="invisible nomargin fs-cell fs-all-full" />
-      {% comment %}
-      <div class="fs-cell fs-lg-4 fs-md-3 fs-sm-half">
-         <label><small>size</small></label>
-         <select class="select-nostyle">
-            <option>small</option>
-            <option>medium</option>
-            <option>large</option>
-         </select>
-      </div>
-      <div class="fs-cell fs-lg-4 fs-md-3 fs-sm-half">
-         <label><small>quantity</small></label>
-         <select class="select-nostyle">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-         </select>
-      </div>
-      {% endcomment %}
       <div class="fs-cell fs-lg-4 fs-md-3 fs-sm-half">
          <hr class="invisible compact">
          <button type="submit" name="add" id="AddToCart" class="btn btn-primary btn-full ss-gizmo ss-plus right btn-icon">add to cart</button>
@@ -60,10 +44,5 @@
 <hr class="divider">
 
 <div id="product--desc">
-   <p>Le Manteau in Dark Grey by Jacquemus. Oversized wool coat features large notched lapels, an open front with side tie closure, front flap pockets, and small vent at back hem.</p>
-   <ul>
-      <li>100% wool with 100% polyester lining</li>
-      <li>Dry clean only</li>
-      <li>Made in France</li>
-   </ul>
+   {{ product.description }}
 </div>

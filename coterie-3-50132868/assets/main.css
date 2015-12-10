@@ -5586,7 +5586,7 @@ body {
   opacity: 0;
   top: -5px;
   pointer-events: none;
-  z-index: 99;
+  z-index: 999;
   background: rgba(17, 17, 17, 0.95);
   color: #fff;
   -webkit-transition: 300ms ease;
