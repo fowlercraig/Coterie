@@ -2,6 +2,29 @@
   // Collections Slideshow
 
     {
+      "name": "About Background",
+      "settings": [
+        {
+          "type":"image",
+          "id":"about_bg.jpg",
+          "label": "Image",
+          "max-width": 1200,
+          "info": "1200px wide required"
+        },
+        {
+          "type": "text",
+          "id": "about_title",
+          "label": "About Title"
+        },
+        {
+          "type": "textarea",
+          "id": "about_desc",
+          "label": "About Description"
+        }
+      ]
+    },
+
+    {
     "name": "Homepage Slideshow",
     "settings": [
       {

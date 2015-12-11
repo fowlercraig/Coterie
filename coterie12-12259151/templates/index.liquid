@@ -1,0 +1,136 @@
+{% if settings.video %}
+
+<div class="videoWrapper">
+  {{ settings.video-embed }}
+</div>
+<div class="clear"></div>
+
+{% endif %}
+
+{% if settings.slideshow %}
+<div class="flexslider">
+  <ul class="slides">
+    
+    <li><a href="{{ settings.slide1_url }}"><img src="{{ 'slide1.jpg' | asset_url }}" alt="{{shop.name}}" /></a></li>
+    {% if settings.slide_2_check %}<li><a href="{{ settings.slide2_url }}"><img src="{{ 'slide2.jpg' | asset_url }}" alt="{{ settings.slide1_alt }}" /></a></li>{% endif %}
+    {% if settings.slide_3_check %}<li><a href="{{ settings.slide3_url }}"><img src="{{ 'slide3.jpg' | asset_url }}" alt="{{ settings.slide2_alt }}" /></a></li>{% endif %}
+    {% if settings.slide_4_check %}<li><a href="{{ settings.slide4_url }}"><img src="{{ 'slide4.jpg' | asset_url }}" alt="{{ settings.slide3_alt }}" /></a></li>{% endif %}
+    {% if settings.slide_5_check %}<li><a href="{{ settings.slide5_url }}"><img src="{{ 'slide5.jpg' | asset_url }}" alt="{{ settings.slide5_alt }}" /></a></li>{% endif %}
+    {% if settings.slide_6_check %}<li><a href="{{ settings.slide6_url }}"><img src="{{ 'slide6.jpg' | asset_url }}" alt="{{ settings.slide6_alt }}" /></a></li>{% endif %}
+    {% if settings.slide_7_check %}<li><a href="{{ settings.slide7_url }}"><img src="{{ 'slide7.jpg' | asset_url }}" alt="{{ settings.slide7_alt }}" /></a></li>{% endif %}
+    {% if settings.slide_8_check %}<li><a href="{{ settings.slide8_url }}"><img src="{{ 'slide8.jpg' | asset_url }}" alt="{{ settings.slide8_alt }}" /></a></li>{% endif %}
+    {% if settings.slide_9_check %}<li><a href="{{ settings.slide9_url }}"><img src="{{ 'slide9.jpg' | asset_url }}" alt="{{ settings.slide9_alt }}" /></a></li>{% endif %}
+    {% if settings.slide_10_check %}<li><a href="{{ settings.slide10_url }}"><img src="{{ 'slide10.jpg' | asset_url }}" alt="{{ settings.slide10_alt }}" /></a></li>{% endif %}           
+    
+  </ul>
+</div>
+<div class="clear"></div>
+
+{% endif %}
+
+
+{% if settings.promo %}
+<div class="row">
+  <div id="leftpromo" class="desktop-4 tablet-2 mobile-3">
+    <a href="{{ settings.leftlink }}"><img src="{{ 'leftpromo.jpg' | asset_url }}" alt="{{ settings.promo1_alt }}" style="border: 0;" class="scale-with-grid"/></a>
+  </div>
+  
+  <div id="midpromo" class="desktop-4 tablet-2 mobile-3">
+    <a href="{{ settings.midlink }}"><img src="{{ 'midpromo.jpg' | asset_url }}" alt="{{ settings.promo2_alt }}" style="border: 0;" class="scale-with-grid"/></a>
+  </div>
+  
+  <div id="rightpromo" class="desktop-4 tablet-2 mobile-3">         
+    <a href="{{ settings.rightlink }}"><img src="{{ 'rightpromo.jpg' | asset_url }}" alt="{{ settings.promo3_alt }}" style="border: 0;" class="scale-with-grid"/></a>
+  </div>
+</div>
+<div class="clear"></div>
+
+{% endif %}
+
+
+{% if settings.homepage-products %}
+
+
+{% if settings.homepage-collection-title ==  blank %}
+<h2 class="section-title clearfix">{{ 'layout.homepage.products_title' | t }}</h2>
+{% else %}
+<h2 class="section-title clearfix">{{ settings.homepage-collection-title }}</h2>
+{% endif %}
+<div id="product-loop" class="desktop-12 mobile-3">
+  {% for product in collections[settings.homepage-collection].products limit: settings.homepage-product-limit %}
+  <div class="product-index desktop-2 tablet-2 mobile-half{% cycle ' first', '', ' mobile-first', ' tablet-first', '', ' last' %}" id="prod-{{ product.id }}" data-alpha="{{ product.title }}" data-price="{{ product.price }}">          
+		{% include 'product-listing' %}
+  </div>
+  {% endfor %} 
+</div>
+<div class="clear"></div>
+{% endif %}
+
+
+
+
+{% if settings.homepage-collections %}
+{% if settings.homepage-collection-title ==  blank %}
+<h2 class="section-title clearfix">{{ 'layout.homepage.collections_title' | t }}</h2>
+{% else %}
+<h2 class="section-title clearfix">{{ settings.homepage-collect-title }}</h2>
+{% endif %}
+
+<div id="collection-loop">  
+  {% for link in linklists[settings.home-collection-linklist].links %}
+  {% assign collection = link.object %}
+  <div class="collection-index desktop-3 tablet-2 mobile-half{% cycle ' first', '', ' mobile-first', ' tablet-first last' %}" data-alpha="{{ collection.title }}">  
+    <div class="collection-image">
+      <a href="{{ collection.url }}" title="{{ collection_title }}">
+        {% if collection.image %}
+        {{ collection.image.src | collection_img_url: 'grande' | img_tag: collection_title }}
+        {% else %}
+        {{ collection.products.first.featured_image | product_img_url: 'grande' | img_tag: collection_title }}
+        {% endif %}
+      </a>     
+    </div>
+    
+    <div class="collection-info">
+      <a href="{{ collection.url }}" title="Browse our {{ collection.title }} collection">
+        <h3>{{ collection.title }}</h3><p>{{ collection.products_count }} items</p>
+      </a>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<div class="clear"></div>
+{% endif %}
+
+
+
+{% if settings.frontpage-text-area %}
+<h1 class="section-title clearfix">{{ pages.frontpage.title }}</h1>
+<div class="desktop-12">
+  
+  <div class="rte">{{ pages.frontpage.content }}</div>
+</div>
+<div class="clear"></div>
+{% endif %}
+
+
+{% if settings.show-instagram-feed %}    
+{% assign url = '{{image}}' %}
+{% assign caption = '{{caption}}' %}
+<div id="instagram-card" class="clearfix">
+  <h2 class="section-title"><a href="http://instagram.com/{{ settings.instagram_name }}" target="_blank">{{ 'layout.homepage.instagram' | t }} @{{ settings.instagram_name }}</a> {{ 'layout.homepage.instagram_follow_where' | t }}</h2>
+  <div id="instafeed"></div>
+  <script type="text/javascript">
+    var userFeed = new Instafeed({
+      get: 'user',
+      userId: {{ settings.instagram-user-id }},
+    	accessToken: '{{ settings.instagram-access-token }}',
+    	template: '<a class="fancybox desktop-2 mobile-half padded" href="{{url}}" rel="ig" title="{{ caption }}"><img class="instagram-image" src="{{ url }}" /></a>'
+    });
+    userFeed.run();        
+  </script>
+</div>
+{% endif %}  
+
+
+

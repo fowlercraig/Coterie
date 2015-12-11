@@ -1,0 +1,70 @@
+<div id="collectionpage">
+  {% paginate collection.products by 48 %}
+  
+  <div class="collection-description">
+    <h1>{{ collection.title }}</h1>
+    <div class="rte">{{ collection.description }}</div>
+  </div>
+  
+  <div class="clear"></div>
+  
+  
+  <div id="collection-sidebar" class="desktop-3 mobile-3">
+    <a id="dropdown" href="#" title="Click This Button" class="button">Menu</a>
+    <div class="dropdownwrap">
+      
+      {% if settings.homepage-collection-title ==  blank %}
+      <h4>{{ 'collections.sidebar.linklist_title' | t }}</h4>
+      {% else %}
+      <h4>{{ settings.collection_linklist_1_title }}</h4>
+      {% endif %}          
+      
+      <div class="sidenav">
+        <ul>
+          {% for link in linklists[settings.collection_side_1].links %}
+          <li>{{ link.title | link_to: link.url }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% include 'sidesort' %}
+    </div>
+  </div>
+  
+  
+  <script>
+    $(document).ready(function(e){
+      $('#dropdown').on('click',function(){
+        $('.dropdownwrap').slideToggle();
+      });
+      
+    })
+  </script>
+  
+  
+  <div id="product-loop" class="desktop-9 mobile-3">
+    
+    
+    {% for product in collection.products %}
+    
+    <div class="product-index desktop-4 tablet-2 mobile-3{% cycle ' first', '', ' last' %}" id="prod-{{ product.id }}" data-alpha="{{ product.title }}" data-price="{{ product.price }}">          
+      
+            {% include 'product-listing' %}
+
+      
+    </div>
+    
+    {% endfor %} 
+    
+  </div>
+  
+  
+  
+  <div class="clear"></div>
+  
+  {% include 'pagination' %}
+
+  
+  {% endpaginate %}
+  
+</div>
+

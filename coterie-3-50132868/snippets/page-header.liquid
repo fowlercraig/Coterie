@@ -1,31 +1,50 @@
+{% assign vendor = true %}
+
+{% for link in linklists.main-menu.links %}
+{% assign boom = link.handle %}
+{% if vendor == true and collection.handle == boom %}
+{% assign vendor = false %}
+{% endif %}
+{% endfor %}
+
 <div class="page-header">
-<div class="centered centered-full">
-  <div class="fs-row">
-    <div class="fs-cell fs-all-full">
-      <div class="page-title_wrapper">
-        <h1 class="page-title">
-          {% if template == 'index' %}{{ shop.name }}{% endif %}
-          {% if template == 'collection' %}{{ collection.title }}.{% endif %}
-          {% if template == 'cart' %}
-          your cart.
-          <span class="page-title_sub"><small>subtotal: <small>{{ cart.total_price | money }}</small></small></span>
-          {% endif %}
+  <div class="centered centered-full">
+    <div class="fs-row">
 
-          {% comment %}
-          <?php else: ?>
-        	{{ page.title }}
-        	<?php if (isset($_GET['filter'])): ?>
-        	<?php if ( $_GET['filter'] != 'all' ): ?>
-        	<br><span><small><?php echo $_GET['filter']; ?></small></span>
-        	{% endif %}
-        	{% endif %}
-          {% endif %}
-          {% endcomment %}
+      <div class="fs-cell {% if vendor %}fs-all-half{% else %}fs-all-full{% endif %}">
+        <div class="page-title_wrapper">
+          <h1 class="page-title">
+            {% if template == 'index' %}{{ shop.name }}{% endif %}
+            {% if template == 'collection' %}{{ collection.title }}.{% endif %}
+            {% if template == 'cart' %}
+            your cart.
+            <span class="page-title_sub"><small>subtotal: <small>{{ cart.total_price | money }}</small></small></span>
+            {% endif %}
 
-          
-        </h1>
+            {% comment %}
+            <?php else: ?>
+          	{{ page.title }}
+          	<?php if (isset($_GET['filter'])): ?>
+          	<?php if ( $_GET['filter'] != 'all' ): ?>
+          	<br><span><small><?php echo $_GET['filter']; ?></small></span>
+          	{% endif %}
+          	{% endif %}
+            {% endif %}
+            {% endcomment %}
+
+            
+          </h1>
+        </div>
       </div>
+
+
+      {% if vendor %}
+      <div class="page-header--more text-right fs-cell fs-all-half fs-contained">
+        <a href="#" class="swap toggle_linked" data-swap-target=".brand-info" data-swap-linked=".toggle_linked">more about <br>{{ collection.title }}</a>
+      </div>
+      {% endif %}
+      
+
     </div>
   </div>
-</div>
 </div>

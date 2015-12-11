@@ -1,0 +1,48 @@
+<div id="collectionpage">
+  <h1>{{ 'collections.general.all_collections' | t }}</h1>
+  {% paginate collections by 48 %}
+  
+  {% if collections.size > 0 %}
+  
+  
+  <div id="product-loop" class="desktop-12 mobile-3">
+    {% for collection in collections %}
+    
+    <div class="product-index desktop-3 mobile-3{% cycle ' first', '', '', ' last' %}" id="prod-{{ product.id }}" data-alpha="{{ product.title }}" data-price="{{ product.price }}">          
+      <div class="collection-image">
+        <a href="{{ collection.url }}" title="{{ collection_title }}">
+          {% if collection.image %}
+          {{ collection.image.src | collection_img_url: 'grande' | img_tag: collection_title }}
+          {% else %}
+          {{ collection.products.first.featured_image | product_img_url: 'grande' | img_tag: collection_title }}
+          {% endif %}
+        </a>     
+      </div>
+      
+      <div class="product-info">
+        <div class="product-info-inner">
+          <a href="{{ collection.url }}" title="{{ collection_title }} collection">
+            <h3>{{ collection.title }}</h3>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    
+    {% endfor %}
+  </div>
+  
+  
+  {% else %}
+  <p>{{ 'collections.general.no_matches' | t }}</p>
+  {% endif %}
+  
+  <div class="clear"></div>
+  
+  {% include 'pagination' %}
+
+  
+  {% endpaginate %}
+</div>
+
+
