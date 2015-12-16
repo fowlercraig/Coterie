@@ -4489,13 +4489,18 @@ select {
   box-shadow: inset 0 0 0 1px rgba(153, 153, 153, 0.5);
   height: 40px;
   line-height: 43px;
-  padding: 0 15px;
+  padding: 0 15px ;
   border-radius: 2px;
   font-size: 14px;
   font-size: 0.875rem;
   margin-bottom: 15px;
   background: #fff url('icon_down.svg') center right 10px no-repeat;
   background-size: 12px auto;
+}
+select.nude {
+  box-shadow: none;
+  margin-bottom: 0;
+  background-position: center right;
 }
 form input[type=submit],
 form input[type=search] {
@@ -4572,10 +4577,6 @@ form input[type=search]-nav {
 form input[type=submit]-nav:first-child,
 form input[type=search]-nav:first-child {
   padding-left: 0;
-}
-form input[type=submit]-nav[class*="ss-"],
-form input[type=search]-nav[class*="ss-"] {
-  padding: 0;
 }
 form input[type=submit]-hamburg,
 form input[type=search]-hamburg {
@@ -4910,9 +4911,6 @@ table td:first-child {
 }
 .btn-nav:first-child {
   padding-left: 0;
-}
-.btn-nav[class*="ss-"] {
-  padding: 0;
 }
 .btn-hamburg {
   position: relative;

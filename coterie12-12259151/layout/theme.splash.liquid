@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+  <!-- Google Web Fonts
+================================================== -->
+
+  {% assign font = "'Arvo', serif" %}
+  {% if settings.logo-font == font or settings.font == font or settings.headings_font == font or settings.navigation-font %}
+  <link href='//fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+  {% endif %}  
+
+  {% assign font = "'Glegoo', serif" %}
+  {% if settings.logo-font == font or settings.font == font or settings.headings_font == font or settings.navigation-font %}
+  <link href='//fonts.googleapis.com/css?family=Glegoo' rel='stylesheet' type='text/css'>
+  {% endif %}
+
+  {% assign font = "'Lato', sans-serif" %}
+  {% if settings.logo-font == font or settings.font == font or settings.headings_font == font or settings.navigation-font %}
+  <link href='//fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+  {% endif %}  
+
+  {% assign font = "'Lobster', cursive" %}
+  {% if settings.logo-font == font or settings.font == font or settings.headings_font == font or settings.navigation-font %}
+  <link href='//fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+  {% endif %}   
+
+  {% assign font = "'Lobster Two', cursive" %}
+  {% if settings.logo-font == font or settings.font == font or settings.headings_font == font or settings.navigation-font %}
+  <link href='//fonts.googleapis.com/css?family=Lobster+Two:400,700' rel='stylesheet' type='text/css'>
+  {% endif %}   
+
+  {% assign font = "'Montserrat', sans-serif" %}
+  {% if settings.logo-font == font or settings.font == font or settings.headings_font == font or settings.navigation-font %}
+  <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  {% endif %}  
+
+  {% assign font = "'Noticia Text', serif" %}
+  {% if settings.logo-font == font or settings.font == font or settings.headings_font == font or settings.navigation-font %}
+  <link href='//fonts.googleapis.com/css?family=Noticia+Text:400,700' rel='stylesheet' type='text/css'>
+  {% endif %}     
+
+  {% assign font = "'Open Sans', sans-serif" %}
+  {% if settings.logo-font == font or settings.font == font or settings.headings_font == font or settings.navigation-font %}
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+  {% endif %}  
+
+  {% assign font = "'Open Sans Condensed', sans-serif" %}
+  {% if settings.logo-font == font or settings.font == font or settings.headings_font == font or settings.navigation-font %}
+  <link href='//fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+  {% endif %}
+
+  {% assign font = "'Oswald', sans-serif" %}
+  {% if settings.logo-font == font or settings.font == font or settings.headings_font == font or settings.navigation-font %}
+  <link href='//fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+  {% endif %}
+
+  {% assign font = "'PT Sans', sans-serif" %}
+  {% if settings.logo-font == font or settings.font == font or settings.headings_font == font or settings.navigation-font %}
+  <link href='//fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+  {% endif %}    
+
+  {% assign font = "'PT Sans Narrow', sans-serif" %}
+  {% if settings.logo-font == font or settings.font == font or settings.headings_font == font or settings.navigation-font %}
+  <link href='//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
+  {% endif %} 
+
+  {% assign font = "'Questrial', sans-serif" %}
+  {% if settings.logo-font == font or settings.font == font or settings.headings_font == font or settings.navigation-font %}
+  <link href='//fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+  {% endif %}   
+
+  {% assign font = "'Raleway', sans-serif" %}
+  {% if settings.logo-font == font or settings.font == font or settings.headings_font == font or settings.navigation-font %}
+  <link href='//fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+  {% endif %}    
+
+
+  <!-- Basic Page Needs
+================================================== -->
+
+  <title>
+    {% if template == 'index' %}{% if page_title contains 'Welcome' %}{{ shop.name }} &ndash; Welcome{% else %}{{ page_title }}{% endif %}{% elsif template == '404' %}Page Not Found{% elsif page_title contains shop.name %}{{ page_title }}{% else %}{{ page_title }} &ndash; {{ shop.name }}{% endif %}
+  </title>
+  {% if page_description %}
+  <meta name="description" content="{{ page_description }}" />
+  {% endif %}
+  <link rel="canonical" href="{{ canonical_url }}" />
+
+
+  <!-- Mobile Specific Metas
+================================================== -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- CSS
+================================================== -->
+
+  {{ 'stylesheet.css' | asset_url | stylesheet_tag }}  
+  {{ 'layout.css' | asset_url | stylesheet_tag }}
+  {{ 'flexslider.css' | asset_url | stylesheet_tag }}
+  {{ 'jquery.fs.selecter.css' | asset_url | stylesheet_tag }}
+  {{ 'jquery.fancybox.css' | asset_url | stylesheet_tag }}
+  {{ 'font-awesome.css' | asset_url | stylesheet_tag }}
+
+
+  <!--[if IE 7]>
+{{ 'ie7.css' | asset_url | stylesheet_tag }}
+<![endif]-->
+
+  <!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+  <!-- JS
+================================================= -->
+
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+  {{ 'theme.js' | asset_url | script_tag }}  
+  {{ 'option_selection.js' | shopify_asset_url | script_tag }}
+  {{ 'jquery.flexslider.js' | asset_url | script_tag }}
+  {{ 'jquery.easing.1.3.js' | asset_url | script_tag }}
+  {{ 'jquery.fs.selecter.min.js' | asset_url | script_tag }}
+  {{ 'jquery.fancybox.pack.js' | asset_url | script_tag }} 
+  {{ 'jquery.elevatezoom.js' | asset_url | script_tag }}  
+  {{ 'jquery.placeholder.js' | asset_url | script_tag }}  
+  {{ 'jquery.cookie.js' | asset_url | script_tag }}
+
+  {% if template == 'index' %}
+  {{ 'instafeed.js' | asset_url | script_tag }}
+  {% endif %}    
+
+
+  <!--[if (gte IE 6)&(lte IE 8)]>
+{{ 'selectivizr-min.js' | asset_url | script_tag }}
+<![endif]-->   
+
+  {{ content_for_header }}
+
+  {% if template contains 'customers' %}
+  {{ "shopify_common.js" | shopify_asset_url | script_tag }}
+  {{ "customer_area.js"  | shopify_asset_url | script_tag }}
+  {% endif %}
+
+  <!-- Favicons
+================================================== -->
+  <link rel="shortcut icon" href="{{ 'favicon.png' | asset_url }}">
+
+  <style>
+    #wrapper {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background: #fff;
+    }
+    #wrapper--inner {
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .text-center {
+      text-align: center;
+    }
+  </style>
+
+
+</head>
+
+<body class="gridlock">
+  <div id="wrapper">
+    <div id="wrapper--inner">
+      <div class="row">
+        <div class="desktop-12 tablet-6 mobile-3 text-center">
+          <h2>New Website Coming Soon</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+
+<div>
+  <label for="sort-by">sort by</label> 
+  <select id="sort-by" class="nude">
+    <option value="manual">featured</option>
+    <option value="price-ascending">price: low to high</option>
+    <option value="price-descending">price: high to low</option>
+    <option value="title-ascending">A-Z</option>
+    <option value="title-descending">Z-A</option>
+    <option value="created-ascending">oldest to newest</option>
+    <option value="created-descending">newest to oldest</option>
+    <option value="best-selling">best selling</option>
+  </select>
+</div>
+<script>
+Shopify.queryParams = {};
+if (location.search.length) {
+  for (var aKeyValue, i = 0, aCouples = location.search.substr(1).split('&'); i < aCouples.length; i++) {
+    aKeyValue = aCouples[i].split('=');
+    if (aKeyValue.length > 1) {
+      Shopify.queryParams[decodeURIComponent(aKeyValue[0])] = decodeURIComponent(aKeyValue[1]);
+    }
+  }
+}
+jQuery('#sort-by')
+  .val('{{ collection.sort_by | default: collection.default_sort_by | escape }}')
+  .bind('change', function() {
+    Shopify.queryParams.sort_by = jQuery(this).val();
+    location.search = jQuery.param(Shopify.queryParams).replace(/\+/g, '%20');
+  });
+</script>

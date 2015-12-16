@@ -38,10 +38,14 @@
       </div>
 
 
+      {% if template == 'collection' %}
+      {% if template != 'index' %}
       {% if vendor %}
       <div class="page-header--more text-right fs-cell fs-all-half fs-contained">
         <a href="#" class="swap toggle_linked" data-swap-target=".brand-info" data-swap-linked=".toggle_linked">more about <br>{{ collection.title }}</a>
       </div>
+      {% endif %}
+      {% endif %}
       {% endif %}
       
 

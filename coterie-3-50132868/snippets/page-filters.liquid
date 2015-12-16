@@ -2,10 +2,16 @@
 <div class="page-filters fs-row">
   <nav class="fs-cell fs-all-full fs-sm-3">
     <div class="page-filters--wrapper">
-      <span class="ss-gizmo ss-category btn btn-nav">filter</span>
+      <span class="ss-gizmo ss-category btn btn-nav">{{ collection.title | downcase }}</span>
+      <span class="ss-gizmo ss-category btn btn-nav">/</span>
       {% for link in linklists.men-menu.links %}
-      <a href="{{ link.url }}" class="btn btn-nav {% if link.active %}btn-active{% endif %}">{{ link.title }}</a>
+      <a href="{{ link.url }}" class="btn btn-nav {% if link.active %}btn-active{% endif %}">{{ link.title | downcase }}</a>
       {% endfor %}
+      {% if template == 'collection' %}
+      <span class="btn btn-nav fl-right">
+        {% include 'sort' %}
+      </span>
+      {% endif %}
     </div>
   </nav>
 </div>

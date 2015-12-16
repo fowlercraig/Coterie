@@ -265,13 +265,18 @@ select {
   box-shadow: inset 0 0 0 1px fade(@gray, 50%);
   height: 40px;
   line-height: 43px;
-  padding: 0 15px;
+  padding: 0 15px ;
   //min-width: 300px;
   border-radius: 2px;
   .font_size(14);
   margin-bottom: 15px;
   background: @white url('icon_down.svg') center right 10px no-repeat;
   background-size: 12px auto;
+  &.nude {
+    box-shadow: none;
+    margin-bottom: 0;
+    background-position: center right;
+  }
 }
 
 form input[type=submit],
