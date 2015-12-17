@@ -77,6 +77,32 @@
 		border-top: 1px solid @lighterGray;
 		border-bottom: 1px solid @lighterGray;
 		padding: 10px 0;
+
+		&_btn {
+			height: 45px;
+			overflow: hidden;
+			&--wrapper {
+				transition: 200ms ease;
+				.links {
+					a {
+						.font_size(20);
+						margin: 0 5px;
+						&:before {
+							position: relative;
+							top: .125em;
+						}
+					}
+				}
+			}
+			&:hover {
+				> div {
+					margin-top: -45px;
+				}
+			}
+			.btn {
+				margin-bottom: 0;
+			}
+		}
 		
 		ul {
 			margin: 0;

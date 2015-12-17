@@ -11,28 +11,20 @@
   <div class="centered centered-full">
     <div class="fs-row">
 
+      {% if template == 'cart' %}
+      <div class="fs-cell fs-all-full">
+      {% else %}
       <div class="fs-cell {% if vendor %}fs-all-half{% else %}fs-all-full{% endif %}">
+      {% endif %}
+
         <div class="page-title_wrapper">
           <h1 class="page-title">
             {% if template == 'index' %}{{ shop.name }}{% endif %}
             {% if template == 'collection' %}{{ collection.title }}.{% endif %}
             {% if template == 'cart' %}
             your cart.
-            <span class="page-title_sub"><small>subtotal: <small>{{ cart.total_price | money }}</small></small></span>
+            <span class="page-title_sub fl-right"><small>subtotal: <small>{{ cart.total_price | money }}</small></small></span>
             {% endif %}
-
-            {% comment %}
-            <?php else: ?>
-          	{{ page.title }}
-          	<?php if (isset($_GET['filter'])): ?>
-          	<?php if ( $_GET['filter'] != 'all' ): ?>
-          	<br><span><small><?php echo $_GET['filter']; ?></small></span>
-          	{% endif %}
-          	{% endif %}
-            {% endif %}
-            {% endcomment %}
-
-            
           </h1>
         </div>
       </div>

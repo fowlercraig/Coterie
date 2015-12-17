@@ -25,14 +25,14 @@
               <div class="brand-clips">
                 <span class="color-grey">Featured Clips</span>
                 {% assign blog = blogs.news %}
-                {% capture collectionTitle %}{{ collection.title }}{% endcapture %}
-                {% for article in blog.articles %}
 
+                {% capture collectionTitle %}{{ collection.title | handleize }}{% endcapture %}
+                {% for article in blog.articles %}
                 {% if article.tags contains collectionTitle %}
                 <div class="brand-clips--item"><a href="#">{{ article.title }}</a></div>
                 {% endif %}
-
                 {% endfor %}
+
               </div>
             </div>
           </div>

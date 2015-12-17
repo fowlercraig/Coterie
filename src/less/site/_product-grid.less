@@ -51,7 +51,7 @@
          position: absolute;
          background: @black;
          color: @white;
-         text-align: center;
+         text-align: center!important;
          display: block;
          border-radius: 50%;
          width: @spaced*.8;
@@ -63,6 +63,8 @@
          &:before {
             position: relative;
             top: .125em;
+            margin: auto;
+            display: block;
          }
       }
       &_controls {

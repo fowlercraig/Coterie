@@ -4486,11 +4486,11 @@ select {
      -moz-appearance: none;
           appearance: none;
   border: none;
-  box-shadow: inset 0 0 0 1px rgba(153, 153, 153, 0.5);
+  box-shadow: inset 0 0 0 1px #E6E5E6;
   height: 40px;
   line-height: 43px;
   padding: 0 15px ;
-  border-radius: 2px;
+  border-radius: 3px;
   font-size: 14px;
   font-size: 0.875rem;
   margin-bottom: 15px;
@@ -4577,6 +4577,10 @@ form input[type=search]-nav {
 form input[type=submit]-nav:first-child,
 form input[type=search]-nav:first-child {
   padding-left: 0;
+}
+form input[type=submit]-nav.btn-active,
+form input[type=search]-nav.btn-active {
+  color: #999;
 }
 form input[type=submit]-hamburg,
 form input[type=search]-hamburg {
@@ -4740,7 +4744,7 @@ form input[type=search]-burg {
   text-align: right;
 }
 .divider {
-  background: #E6E5E6;
+  background: #F2F2F2;
 }
 .divider.vertical {
   width: 1px;
@@ -4911,6 +4915,9 @@ table td:first-child {
 }
 .btn-nav:first-child {
   padding-left: 0;
+}
+.btn-nav.btn-active {
+  color: #999;
 }
 .btn-hamburg {
   position: relative;
@@ -5978,6 +5985,17 @@ body {
   line-height: 30px;
   width: 30px;
   border-radius: 50%;
+  text-align: center!important;
+  text-decoration: none!important;
+  border-bottom: 0!important;
+}
+.page-modal--close:before {
+  border: 0;
+  display: block;
+  margin: auto;
+  position: relative;
+  top: .2em;
+  text-decoration: none;
 }
 #index--splash {
   background: #111;
@@ -6145,7 +6163,7 @@ body {
   position: absolute;
   background: #111;
   color: #fff;
-  text-align: center;
+  text-align: center!important;
   display: block;
   border-radius: 50%;
   width: 20px;
@@ -6159,6 +6177,8 @@ body {
 .product--grid-thumb_delete:before {
   position: relative;
   top: .125em;
+  margin: auto;
+  display: block;
 }
 .product--grid-thumb_controls {
   height: 50px;
@@ -6243,6 +6263,29 @@ body {
   border-top: 1px solid #E6E5E6;
   border-bottom: 1px solid #E6E5E6;
   padding: 10px 0;
+}
+#product--share_btn {
+  height: 45px;
+  overflow: hidden;
+}
+#product--share_btn--wrapper {
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
+}
+#product--share_btn--wrapper .links a {
+  font-size: 20px;
+  font-size: 1.25rem;
+  margin: 0 5px;
+}
+#product--share_btn--wrapper .links a:before {
+  position: relative;
+  top: .125em;
+}
+#product--share_btn:hover > div {
+  margin-top: -45px;
+}
+#product--share_btn .btn {
+  margin-bottom: 0;
 }
 #product--share ul {
   margin: 0;

@@ -2,7 +2,7 @@
 
   <div class="product--grid-thumb product--grid-thumb_nohover fs-cell fs-lg-full fs-md-full fs-sm-full fs-xs-half">
     <a class="product--grid-thumb_delete" href="/cart/change?line={{ forloop.index }}&quantity=0"><span class="ss-gizmo ss-delete"></span></a>
-    <a href="{{ product.url | within: collection }}">
+    <a href="{{ item.url }}">
       <img src="{{ item | img_url: 'large' }}" class="img-responsive" alt="{{ product.featured_image.alt | escape }}">
     </a>
   </div>
