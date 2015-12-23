@@ -10585,7 +10585,7 @@
 		"outputAbbreviatedPath": "\/coterie-3-50132868\/assets\/main.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 1,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/src\/js\/min\/main-min.js": {

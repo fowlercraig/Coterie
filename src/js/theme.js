@@ -78,7 +78,7 @@ $(document).ready(function(){
 	$(".swap").swap();
    searchClick();
 
-   if ($('body').hasClass('page-index')) {
+   if ($('body').hasClass('page-co-ter-ie')) {
       console.log('index!');
      splashLoaded();
     }

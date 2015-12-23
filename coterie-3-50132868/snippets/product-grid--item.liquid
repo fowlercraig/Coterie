@@ -13,15 +13,27 @@
     </a>
     <div class="product--grid-thumb_controls">
       <span>Available Sizes</span>
+
+      {% assign found_option = false %}
+      {% assign is_color = false %}
+      {% assign option_index = 0 %}
+
+      {% for option in product.options %}
+      {% if option == 'Size' %}
+      
       {% for variant in product.variants %}
-      {% if product.available and product.variants.size > 1 %}
+      {% assign value = variant.options[option_index] %}
+      {% unless values contains value %}
+      {% assign values = values | join: ',' %}
+      {% assign values = values | append: ',' | append: value %} 
+      {% assign values = values | split: ',' %}
+      <span> | {{ value }}</span>
+      {% endunless %}
+      {% endfor %}
       
-      <span>{{ variant.title }} • </span>
-      
-      {% else %}
-      <span class="disabled">{{ variant.title }}</span>
       {% endif %}
       {% endfor %}
+
       <span class="fl-right">
         <a href="#" class="ss-gizmo ss-eye">zoom</a>
       </span>

@@ -25,6 +25,19 @@
     },
 
     {
+      "name": "Loading Background",
+      "settings": [
+        {
+          "type":"image",
+          "id":"loading_bg.jpg",
+          "label": "Image",
+          "max-width": 1200,
+          "info": "1200px wide required"
+        }
+      ]
+    },
+
+    {
     "name": "Homepage Slideshow",
     "settings": [
       {
