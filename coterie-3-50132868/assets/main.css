@@ -5420,6 +5420,9 @@ body {
   background: #F2F2F2;
   margin: 1% 0;
 }
+.home-module:last-child {
+  margin-bottom: 0;
+}
 .home-module.small {
   height: 400px;
 }
@@ -6114,6 +6117,10 @@ body {
   #about-header.fs-swap-active {
     min-height: 500px;
   }
+}
+.fitted iframe {
+  display: block;
+  width: 100%;
 }
 #wrapper {
   overflow: hidden;

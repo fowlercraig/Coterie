@@ -8,7 +8,7 @@ function splashLoaded(){
     overflow: 'hidden',
   });
   $(window).load(function(){
-    setTimeout(function(){
+    //setTimeout(function(){
       $('#splash').addClass('loaded');
       setTimeout(function(){
         $('#splash').remove();
@@ -17,7 +17,7 @@ function splashLoaded(){
           overflow: 'visible',
         });
       },500);
-    }, 5000);
+    //}, 5000);
   });
 }
 
@@ -67,6 +67,9 @@ $(document).ready(function(){
   $("input[type=number]").number();
 	$(".wallpaper").background();
 	$(".carousel").carousel();
+  $('.fitted').fitVids({ 
+    customSelector: "iframe[src^='http://google.com']"
+  });
 
   $('.equal').imagesLoaded( function() {
 	 $(this).equalize();

@@ -19,13 +19,22 @@
 
         <div class="page-title_wrapper">
           <h1 class="page-title">
-            {% if template == 'index' %}{{ shop.name }}{% endif %}
+            {% if template contains 'search' %}search results.{% endif %}
+            {% if template contains 'page' %}{{ page.title }}.{% endif %}
+            {% if template == 'index' %}{{ shop.name }}.{% endif %}
             {% if template == 'collection' %}{{ collection.title }}.{% endif %}
             {% if template == 'cart' %}
             your cart.
             <span class="page-title_sub fl-right"><small>subtotal: <small>{{ cart.total_price | money }}</small></small></span>
             {% endif %}
           </h1>
+          {% if search.performed %}
+          {% if search.results_count == 0 %}
+          <h3>{{ 'general.search.no_results_html' | t: terms: search.terms }}</h3>
+          {% else %}
+          <h3>{{ 'general.search.results_for_html' | t: terms: search.terms }}</h3>
+          {% endif %}
+          {% endif %}
         </div>
       </div>
 
