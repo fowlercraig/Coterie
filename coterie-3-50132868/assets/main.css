@@ -4716,6 +4716,11 @@ form input[type=search]-outline {
   box-shadow: inset 0 0 0 1px #fff;
   color: #fff;
 }
+form input[type=submit]-outline-black,
+form input[type=search]-outline-black {
+  color: #111;
+  box-shadow: 0 0 0 2px #111;
+}
 form input[type=submit]-outline-green,
 form input[type=search]-outline-green {
   color: #73C48B;
@@ -5030,6 +5035,10 @@ table td:first-child {
   background: transparent!important;
   box-shadow: inset 0 0 0 1px #fff;
   color: #fff;
+}
+.btn-outline-black {
+  color: #111;
+  box-shadow: 0 0 0 2px #111;
 }
 .btn-outline-green {
   color: #73C48B;
@@ -5462,6 +5471,9 @@ body {
 #header a.btn-active {
   color: #595959;
 }
+#header.about-swap.fs-swap-active {
+  z-index: 1000;
+}
 #header-mobile {
   height: 100%;
   left: 0;
@@ -5546,6 +5558,9 @@ body {
 }
 #header-wrapper {
   position: relative;
+}
+#header-wrapper.fs-swap-active {
+  z-index: 99999;
 }
 #header.mobile-menu--active {
   -webkit-transform: translate(0, -100%);
@@ -6104,6 +6119,7 @@ body {
   opacity: 1;
   pointer-events: auto;
   min-height: 450px;
+  z-index: 999;
 }
 @media screen and (min-width: 300px) {
   #about-header.fs-swap-active {
@@ -6362,7 +6378,6 @@ body {
   color: #111;
 }
 #cart-footer {
-  background: rgba(17, 17, 17, 0.95);
   z-index: 99;
   left: 0;
   width: 100%;
@@ -6377,7 +6392,6 @@ body {
 #cart-footer .divider {
   margin-top: 12.5px;
   margin-bottom: 12.5px;
-  background: rgba(255, 255, 255, 0.2);
 }
 @media screen and (min-width: 740px) {
   #cart-footer p {
@@ -6386,7 +6400,6 @@ body {
 }
 @media screen and (min-width: 300px) {
   #cart-footer {
-    position: fixed;
     width: 100%;
     bottom: 0;
   }
@@ -6403,4 +6416,12 @@ body {
 #cart-instructions_close a {
   text-decoration: none;
   border: 0;
+}
+.fs-number {
+  margin-bottom: 0;
+}
+.fs-number-element {
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
 }

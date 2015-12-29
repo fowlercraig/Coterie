@@ -22,42 +22,45 @@
 {{ 'option_selection.js' | shopify_asset_url | script_tag }}
 
 <script>
-  var selectCallback = function(variant, selector){};
-  jQuery(function($) {
-    new Shopify.OptionSelectors('productSelect', {
-      product: {{ product | json }},
-      onVariantSelected: selectCallback,
-      enableHistoryState: true
-    });
-    if (variant) {
-      var form = jQuery('#' + selector.domIdPrefix).closest('form');
-      for (var i=0,length=variant.options.length; i<length; i++) {
-        var radioButton = form.find('.swatch[data-option-index="' + i + '"] :radio[value="' + variant.options[i] +'"]');
-        if (radioButton.size()) {
-          radioButton.get(0).checked = true;
-        }
-      }
+// <![CDATA[  
+
+var selectCallback = function(variant, selector) {
+
+  if (variant) {
+    if (variant.available) {
+      $('#AddToCart').removeClass('disabled').removeAttr('disabled').html('add to cart').fadeTo(200,1);
+    } else {
+      $('#AddToCart').html('sold out').addClass('disabled').attr('disabled', 'disabled').fadeTo(200,0.5);        
     }
-    // Add label if only one product option and it isn't 'Title'. Could be 'Size'.
-    {% if product.options.size == 1 and product.options.first != 'Title' %}
-      $('.selector-wrapper:eq(0)').prepend('<label for="productSelect-option-0"><small>{{ product.options.first | escape }}</small></label>');
-    {% endif %}
-    // Hide selectors if we only have 1 variant and its title contains 'Default'.
-    {% if product.variants.size == 1 and product.variants.first.title contains 'Default' %}
-      $('.selector-wrapper').hide();
-    {% endif %}
-    // Disabling out of stock product
-    {% if product.options.size == 1 %}
-    {% for variant in product.variants %}
-    {% unless variant.available %}
-    alert('outofstock');
-    jQuery('.single-option-selector option:eq({{ forloop.index0 }})').attr('disabled', 'disabled');
-    {% endunless %}
-    {% endfor %}
-    jQuery('.single-option-selector').trigger('change');
-    {% endif %}
-  });
-  setTimeout(function(){
-    $('.selector-wrapper').addClass('fs-cell fs-all-third');  
-  },500);
+    if ( variant.compare_at_price > variant.price ) {
+      $('#price-field').html('<span class="product-price on-sale">'+ Shopify.formatMoney(variant.price, "") +'</span>'+'&nbsp;<s class="product-compare-price">'+Shopify.formatMoney(variant.compare_at_price, "")+ '</s>');
+    } else {
+      $('#price-field').html('<span class="product-price">'+ Shopify.formatMoney(variant.price, "") + '</span>' );
+    }        
+  } else {
+    $('#add').val('Unavailable').addClass('disabled').attr('disabled', 'disabled').fadeTo(200,0.5);
+  }
+
+  // Add label if only one product option and it isn't 'Title'. Could be 'Size'.
+  {% if product.options.size == 1 and product.options.first != 'Title' %}
+    $('.selector-wrapper:eq(0)').prepend('<label for="productSelect-option-0"><small>{{ product.options.first | escape }}</small></label>');
+  {% endif %}
+
+  // Hide selectors if we only have 1 variant and its title contains 'Default'.
+  {% if product.variants.size == 1 and product.variants.first.title contains 'Default' %}
+    $('.selector-wrapper').hide();
+  {% endif %}
+
+}
+
+jQuery(function($) {
+  new Shopify.OptionSelectors('productSelect', {
+     product: {{ product | json }},
+     onVariantSelected: selectCallback,
+     enableHistoryState: true
+   });
+  $('.selector-wrapper').addClass('fs-cell fs-all-third');  
+});
+
+// ]]>
 </script>

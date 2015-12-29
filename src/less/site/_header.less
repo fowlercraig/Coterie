@@ -19,6 +19,14 @@
 
    }
 
+   &.about-swap {
+      &.fs-swap{
+         &-active {
+            z-index: 1000
+         }
+      }
+   }
+
    &-mobile {
       .cover();
       .transition();
@@ -104,6 +112,9 @@
       //overflow: hidden;
       position: relative;
       //background: @black;
+      &.fs-swap-active {
+         z-index: 99999
+      }
    }
 
    &.mobile-menu {

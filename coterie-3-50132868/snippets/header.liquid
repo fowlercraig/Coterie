@@ -1,5 +1,5 @@
-<div id="header-wrapper">
-   <header id="header" class="menu-swap about-swap {% if template == 'index' %}home{% endif %}">
+<div id="header-wrapper" class="about-swap">
+   <header id="header" class="menu-swap {% if template == 'index' %}home{% endif %}">
       <div class="fs-row">
          <nav id="header--nav_left" class="fs-cell fs-lg-hide fs-md-hide fs-sm-half">
             <a href="#" id="header-menu" class="btn btn-nav btn-hamburg">&nbsp;</a>
@@ -22,6 +22,5 @@
          </nav>
       </div>
    </header>
+   {% include 'search-header' %}
 </div>
-
-{% include 'search-header' %}

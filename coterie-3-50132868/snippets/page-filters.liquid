@@ -1,3 +1,12 @@
+{% for link in linklists.main-menu.links %}
+{% assign boom = link.handle %}
+{% if vendor == true and collection.handle == boom %}
+{% assign vendor = false %}
+{% endif %}
+{% endfor %}
+
+
+{% unless vendor %}
 <hr class="fs-cell fs-all-full divider nomargin">
 <div class="page-filters fs-row">
   <nav class="fs-cell fs-all-full fs-sm-3">
@@ -17,6 +26,7 @@
     </div>
   </nav>
 </div>
+{% endunless %}
 
 <script>
 var width = 0;
