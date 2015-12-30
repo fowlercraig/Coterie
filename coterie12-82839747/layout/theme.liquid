@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+<meta charset="utf-8">
+<title>
+{{ page_title }}{% if current_tags %}{% assign meta_tags = current_tags | join: ', ' %} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags }}{% endif %}{% if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{% endif %}{% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}
+</title>
+<meta name="description" content="{{ page_description | escape }}">
+<link rel="shortcut icon" href="assets/img/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<link rel="stylesheet" href="{{ 'main.css' | asset_url }}">
+<script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js?ver=1.11.1'></script>
+<link href="//cdn.symbolset.com/0a5420ac8ec04a68e39a13df1f9d8f83da2799f8/symbolset.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>
+
+<!--[if lt IE 9]>
+<script src="{{ 'app.ie.min.js' | asset_url }}"></script>
+<![endif]-->
+
+{{ content_for_header }}
+
+{% if template contains 'customers' %}
+{{ 'shopify_common.js' | shopify_asset_url | script_tag }}
+{% endif %}
+
+
+<body class="fs-grid fs-grid-fluid page-{{ page_title | handle }}">
+
+{% if template contains 'co-te-rie' %}
+{% include 'page-splash' %}
+{% endif %}
+
+<div id="wrapper" class="menu-swap">
+
+{% include 'header' %}
+{% include 'header-about' %}
+{% include 'cart-header' %}
+
+<div id="content">{{ content_for_layout }}</div>
+{% include 'footer' %}
+</div>
+
+<script type='text/javascript' src="{{ 'vendor.min.js' | asset_url }}"></script>
+<script type='text/javascript' src="{{ 'main.min.js' | asset_url }}"></script>
+<script src="//cdn.symbolset.com/0a5420ac8ec04a68e39a13df1f9d8f83da2799f8/symbolset.js"></script>
+
+<script type="text/javascript">
+  jQuery(function() {
+      CartJS.init({{ cart | json }});
+  });
+</script>
+{% include 'ajaxify-cart' %}
+</body>
+</html>

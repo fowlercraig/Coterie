@@ -1,0 +1,26 @@
+<div id="header-wrapper" class="about-swap">
+   <header id="header" class="menu-swap {% if template == 'index' %}home{% endif %}">
+      <div class="fs-row">
+         <nav id="header--nav_left" class="fs-cell fs-lg-hide fs-md-hide fs-sm-half">
+            <a href="#" id="header-menu" class="btn btn-nav btn-hamburg">&nbsp;</a>
+            <a href="/" class="btn btn-nav btn-first btn-logo">{{ shop.name }}</a>
+         </nav>
+         <nav id="header--nav_left" class="fs-cell fs-lg-8 fs-md-4 fs-sm-hide navigation">
+            {% if template != 'index' %}
+            <a href="/" class="btn btn-nav btn-first">{{ shop.name }}</a>
+            {% endif %}
+            {% for link in linklists.main-menu.links %}
+            <a href="{{ link.url }}" class="btn btn-nav {% if link.active %}btn-active{% endif %}">{{ link.title }}</a>
+            {% endfor %}
+         </nav>
+         <nav id="header--nav_right" class="fs-cell fs-lg-4 fs-md-2 fs-sm-half text-right cart-swap">
+            <a href="#" id="btnAbout" class="btn btn-nav swap fs-xs-hide" data-swap-target=".about-swap">about</a>
+            <a id="search-start" href="?page=search" class="btn btn-nav swap search-launch" data-swap-target=".search-swap" data-swap-linked=".search-launch">search</a>
+            <a href="#" class="btn btn-nav swap right btn-last cart-launch" data-swap-target=".cart-swap" data-swap-linked=".cart-launch">
+               cart (<span id="cart-count" class="item-count">{{ cart.item_count }}</span>)
+            </a>
+         </nav>
+      </div>
+   </header>
+   {% include 'search-header' %}
+</div>

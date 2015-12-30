@@ -1,0 +1,22 @@
+<div class="wrapper  wrapper-nosides">
+  <div clas="cart-item cart-ajax_item">
+    <div class="fs-row">
+      <div class="fs-cell fs-lg-half fs-md-half fs-sm-3 text-left">
+        <div class="image">
+          <a rv-href='item.url'>
+            <img class="img-responsive" rv-src="item.image | productImageSize 'small'">
+          </a>
+        </div>
+      </div>
+      <div class="fs-cell fs-lg-half fs-md-half fs-sm-3 text-left">
+        <a rv-href='item.url'>
+          <span class="color-grey"  rv-text="item.vendor"></span><br>
+          <span class="color-white" rv-text="item.title"></span><br>
+          <span class="color-grey"  rv-text="item.quantity"></span> | 
+          <span class="color-white" rv-html="item.price | money Currency.currentCurrency"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<hr class="divider compact">

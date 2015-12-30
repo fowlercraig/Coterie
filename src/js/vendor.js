@@ -17,6 +17,7 @@
 // @codekit-prepend "../bower_components/imagesloaded/imagesloaded.pkgd.js"
 // @codekit-prepend "../bower_components/photoswipe/dist/photoswipe.min.js"
 // @codekit-prepend "../bower_components/photoswipe/dist/photoswipe-ui-default.min.js"
+// @codekit-prepend "../bower_components/jquery.fitvids/jquery.fitvids.js"
 
 // UI
 $(document).ready(function(){

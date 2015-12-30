@@ -1,0 +1,33 @@
+<div class="carousel" data-carousel-options='{"controls":{"container":".carousel--controls","next":".carousel--next","previous":".carousel--prev"}}'>
+
+{% for i in (1..6) %}
+{% capture slide %}collection_slide_{{ i }}_enable{% endcapture %}
+{% capture slide_text_color %}collection_slide_{{ i }}_text_color{% endcapture %}
+{% capture slide_heading %}collection_slide_{{ i }}_heading{% endcapture %}
+{% capture slide_subheading %}collection_slide_{{ i }}_subheading{% endcapture %}
+{% capture slide_link %}collection_slide_{{ i }}_link{% endcapture %}
+{% capture slide_img %}collection_slide_{{ i }}.jpg{% endcapture %}
+{% if settings[slide] %}
+
+<div class="carousel--slide">
+  <div class="home-module home-module--nomargin_top wallpaper banner banner-large fs-cell fs-full-all" data-background-options='{"source":"{{ slide_img | asset_url }}"}'>
+    <div class="centered centered-top centered-full fs-all-full fs-md-6 fs-sm-3 fs-contained">
+      <div class="fs-row">
+        <div class="fs-cell fs-all-full text-left">
+          <p>
+            {{ settings[slide_subheading] }}<br>
+            <a href="{{ settings[slide_link] }}">{{ settings[slide_heading] }}</a><br>
+            <div class="carousel--controls">
+              <small><button class='carousel--next ss-gizmo ss-left btn-icon btn-first'></button></small>
+              <small><button class='carousel--prev ss-gizmo ss-right btn-icon btn-last'></button></small>
+            </div>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endif %}
+{% endfor %}
+</div>

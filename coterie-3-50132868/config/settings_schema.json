@@ -20,6 +20,11 @@
           "type": "textarea",
           "id": "about_desc",
           "label": "About Description"
+        },
+        {
+          "type": "textarea",
+          "id": "about_map",
+          "label": "Google Map Embed"
         }
       ]
     },

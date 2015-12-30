@@ -1,0 +1,13 @@
+<footer id="footer" class="bg-color-black">
+   <div class="fs-row">
+      <nav class="fs-cell fs-lg-8 fs-md-4 fs-sm-3">
+         {% for link in linklists.footer-menu.links %}
+         <a href="{{ link.url }}" class="btn btn-nav ">{{ link.title }}</a>
+         {% endfor %}
+      </nav>
+      <nav class="fs-cell fs-lg-4 fs-md-2 fs-sm-3 text-right wag">
+         <a href="http://wearegiants.com" target="blank" class="btn btn-nav">made by WAG.</a>
+      </nav>
+   </div>
+</footer>
+{% include 'pswp-elements' %}

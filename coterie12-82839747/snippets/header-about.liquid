@@ -1,0 +1,18 @@
+<div id="about-header" class="about-swap">
+	<div id="about-header_centered" class="centered centered-full">
+		<div class="fs-row">
+			<div class="fs-cell fs-all-full">
+
+				{% capture about_title %}about_title{% endcapture %}
+				{% capture about_desc %}about_desc{% endcapture %}
+
+				<h1>{{ settings[about_title] }}</h1>
+				<hr class="invisible compact">
+				<p class="emphasized">
+					{{ settings[about_desc] }}
+				</p>
+			</div>
+		</div>
+	</div>
+	<div id="about-header_bg" class="overlay wallpaper covered" data-background-options='{"source":"{{ 'about_bg.jpg' | asset_url }}"}'></div>
+</div>
